@@ -1,0 +1,216 @@
+@font-face {
+  font-family: "harry_pregular";
+  src: url('../src/img/HARRYP__.TTF');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "fuente_2";
+  src: url('../src/img/Alegreya-Medium.ttf');
+  font-weight: normal;
+  font-style: normal;
+}
+
+#portada {
+  text-align: left;
+}
+
+#inicio {
+  background-color: rgba(95, 158, 160, 0.49);
+  margin: auto;
+  margin-left: 220px;
+  margin-right: 220px;
+  border: 8px solid #daeeff78;
+  border-radius: 8%;
+  margin-top: 5%;
+  height: 520px;
+}
+
+h1 {
+  font-family: harry_pregular;
+  text-align: center;
+  color: #ffffff;
+  font-size: 75px;
+}
+
+h2 {
+  font-family: fuente_2;
+  color: #06212d;
+  ;
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+
+#ingresar {
+  display: flex;
+  background-color: #164358;
+  height: 70px;
+  width: 20%;
+  border-radius: 10%;
+  font-size: 20px;
+  border: 2px solid #06212d;
+  ;
+  color: #ffffff;
+  cursor: pointer;
+  transition-duration: 0.4s;
+  justify-content: center;
+  margin-left: 41%;
+  margin-top: 8%;
+}
+
+#ingresar:hover {
+  color: #ffffff;
+  background-color: #1c5671;
+}
+
+#fondo {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -10;
+  visibility: visible;
+  background-color: #404863;
+}
+
+.contenedor {
+  position: absolute;
+  border-style: solid;
+  border-color: aqua;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+
+}
+
+.filtro {
+  position: fixed;
+  border-style: solid;
+  border-color: #6b63b5;
+  background-color: #404863;
+  width: 290px;
+  height: 651px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+}
+
+#logo {
+  height: 27%;
+  width: 68%;
+  margin-top: 13px;
+}
+
+aside {
+  border-style: solid;
+  border-color: #6b63b5;
+  width: -moz-available;
+  margin: 10px;
+
+}
+
+.contenedorTarjetas {
+  border-style: solid;
+  border-color: green;
+  display: flex;
+  flex-direction: column;
+  margin-left: 312px;
+  width: 76%;
+}
+
+.botonesAside {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-color: #ffffff;
+  height: 20%;
+  font-size: 60%;
+  font: caption;
+}
+
+.tarjeta1 {
+  display: flex;
+  flex-direction: row;
+  border-style: solid;
+  border-color: #ffffff;
+  width: 32%;
+  height: 51%;
+  background-color: #16325B;
+}
+
+.seleccion {
+  background-color: rgb(136, 136, 226);
+}
+
+.botones {
+  background-color: #16325B;
+  height: 10%;
+  font-size: 60%;
+  font: caption;
+  width: 100%;
+  color: white;
+  text-align: left;
+  border: 1px solid #404863;
+}
+
+option {
+  font-weight: normal;
+  display: block;
+  background: #3f659dc9;
+}
+
+.botonRol {
+  background-color: #16325B;
+  ;
+  height: 60%;
+  font-size: 60%;
+  font: caption;
+  margin-top: 16px;
+  margin-left: 17px;
+  width: 26%;
+  color: white;
+  border: 1px solid #404863;
+}
+
+
+.busqueda {
+  height: 10%;
+  font-size: 60%;
+  margin-left: 598px;
+  margin-top: 18px;
+}
+
+#video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: auto;
+  z-index: -10;
+  visibility: visible;
+}
+
+footer {
+  position: inherit;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #634a25;
+  text-align: center;
+}
+.imagePersonaje{
+  display: flex;
+  box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+  width: 170px;
+  height: 240px;
+  border-radius: 18px;
+  border: 2px solid #000000bf;
+}
+#contenido {
+  display: flex;
+    justify-content: center;
+}
