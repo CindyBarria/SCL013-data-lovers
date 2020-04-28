@@ -1,32 +1,30 @@
 @font-face {
-  font-family: "harry_pregular";
-  src: url('../src/img/HARRYP__.TTF');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "harry_pregular";
+    src: url('./img/HARRYP__.TTF');
+    font-weight: normal;
+    font-style: normal;
 }
-
 @font-face {
-  font-family: "fuente_2";
-  src: url('../src/img/Alegreya-Medium.ttf');
-  font-weight: normal;
-  font-style: normal;
+    font-family: "fuente_2";
+    src: url('./img/Alegreya-Medium.ttf');
+    font-weight: normal;
+    font-style: normal;
 }
-
 #portada {
+
   text-align: left;
 }
-
 #inicio {
-  background-color: rgba(95, 158, 160, 0.49);
-  margin: auto;
-  margin-left: 220px;
-  margin-right: 220px;
-  border: 8px solid #daeeff78;
-  border-radius: 8%;
-  margin-top: 5%;
-  height: 520px;
+display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-right: 20%;
+    margin-left: 20%;
+    background-color: rgba(95, 158, 160, 0.49);
+    border: 8px solid #daeeff78;
+    border-radius: 10%;
+    margin-top: 4%;
 }
-
 h1 {
   font-family: harry_pregular;
   text-align: center;
@@ -36,75 +34,70 @@ h1 {
 
 h2 {
   font-family: fuente_2;
-  color: #06212d;
-  ;
+  color: #06212d;;
   display: flex;
   justify-content: center;
   font-size: 30px;
 }
 
 #ingresar {
-  display: flex;
-  background-color: #164358;
-  height: 70px;
-  width: 20%;
-  border-radius: 10%;
-  font-size: 20px;
-  border: 2px solid #06212d;
-  ;
-  color: #ffffff;
-  cursor: pointer;
-  transition-duration: 0.4s;
-  justify-content: center;
-  margin-left: 41%;
-  margin-top: 8%;
+    display: flex;
+    background-color: #164358;
+    height: 70px;
+    width: 20%;
+    border-radius: 10%;
+    font-size: 20px;
+    border: 2px solid #06212d;;
+    color: #ffffff;
+    cursor: pointer;
+    transition-duration: 0.4s;
+    justify-content: center;
+    margin-left: 41%;
+    margin-top: 8%;
 }
 
 #ingresar:hover {
   color: #ffffff;
   background-color: #1c5671;
 }
-
-#fondo {
-  position: absolute;
+#fondo{
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
-  height: auto;
+  height: 100%;
   z-index: -10;
   visibility: visible;
   background-color: #404863;
 }
 
 .contenedor {
-  position: absolute;
   border-style: solid;
   border-color: aqua;
   height: 100%;
   display: flex;
   flex-direction: row;
-
+width:98%
 }
 
 .filtro {
   position: fixed;
-  border-style: solid;
-  border-color: #6b63b5;
-  background-color: #404863;
-  width: 290px;
-  height: 651px;
-  margin: 10px;
-  text-align: center;
-  line-height: 75px;
-  font-size: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-style: solid;
+    border-color: #2d2856;
+    background-color: #404863;
+    width: 23%;
+    height: 96%;
+    margin-top: 0.7%;
 }
 
 #logo {
-  height: 27%;
-  width: 68%;
-  margin-top: 13px;
+ height: auto;
+  width: 67%;
+  margin-top:13px;
 }
-
 aside {
   border-style: solid;
   border-color: #6b63b5;
@@ -118,8 +111,8 @@ aside {
   border-color: green;
   display: flex;
   flex-direction: column;
-  margin-left: 312px;
-  width: 76%;
+    margin-left: 24.5%;
+    width: 75%;
 }
 
 .botonesAside {
@@ -132,21 +125,16 @@ aside {
   font: caption;
 }
 
-.tarjeta1 {
-  display: flex;
-  flex-direction: row;
-  border-style: solid;
-  border-color: #ffffff;
-  width: 32%;
-  height: 51%;
-  background-color: #16325B;
-}
 
 .seleccion {
   background-color: rgb(136, 136, 226);
 }
 
 .botones {
+      display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
   background-color: #16325B;
   height: 10%;
   font-size: 60%;
@@ -156,20 +144,18 @@ aside {
   text-align: left;
   border: 1px solid #404863;
 }
-
 option {
-  font-weight: normal;
-  display: block;
-  background: #3f659dc9;
+    font-weight: normal;
+    display: block;
+    background: #3f659dc9;
 }
 
 .botonRol {
-  background-color: #16325B;
-  ;
-  height: 60%;
+  background-color: #16325B;;
+  height: 84%;
   font-size: 60%;
   font: caption;
-  margin-top: 16px;
+  margin-top: 4px; 
   margin-left: 17px;
   width: 26%;
   color: white;
@@ -181,9 +167,8 @@ option {
   height: 10%;
   font-size: 60%;
   margin-left: 598px;
-  margin-top: 18px;
+margin-top: 18px;
 }
-
 #video {
   position: absolute;
   left: 0;
@@ -195,22 +180,82 @@ option {
 }
 
 footer {
-  position: inherit;
+
   left: 0;
   bottom: 0;
   width: 100%;
   color: #634a25;
   text-align: center;
 }
+
 .imagePersonaje{
   display: flex;
   box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
-  width: 170px;
-  height: 240px;
+  width:189px;
+    height: 266px;
   border-radius: 18px;
   border: 2px solid #000000bf;
+  margin: 8%;
+  cursor: pointer;
 }
 #contenido {
+
+
+  border-style:solid;
+  border-color:rgb(241, 10, 10);
+  margin: 2%;
+}
+
+#tarjetas{
   display: flex;
-    justify-content: center;
+  flex-wrap:wrap;
+}
+
+.nombre{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    background: #16325B;
+border: 1px solid #ffffff7a;
+height: 8%;
+    border-radius: 10%;
+
+}
+.contenedorM {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top:0;
+  left: 0; 
+background:rgb(0, 0, 0, 0.2);
+display: flex;
+justify-content: center;
+align-items: center;
+visibility: hidden;
+opacity: 0;
+transition: visivility 0s opacity 0,5s;
+}
+.contenedorMActivo{
+    visibility: visible;
+    opacity: 1;
+}
+.modal{
+    position: relative;
+    background: burlywood;
+    width: 29%;
+    height: 69%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#parrafo {
+    color: blue;
+}
+.close{
+    position:absolute;
+    top:10px;
+    right:10px;
+    font-weight: bold;
+    cursor: pointer;
 }
