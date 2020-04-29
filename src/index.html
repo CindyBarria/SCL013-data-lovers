@@ -3,28 +3,32 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Data Lovers</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1,
+  maximum-scale=1">
+
+  <title> Data Lovers</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
   <div id="portada">
     <video id="video" loop autoplay preload muted>
-      <source src="../src/img/loginHp.webm" type="video/webm;" />
+      <source src="./img/loginHp.webm" type="video/webm;" />
     </video>
     <div id="inicio">
-      <h1>Bienvenidos al mundo de <br> Harry Potter</h1>
+      <h1>Bienvenidos al mundo de<br> Harry Potter</h1>
       <h2>¡Selecciona tu personaje favorito!<br>
         Escoge una casa , varita y patronus.</h2>
       <button id="ingresar"> Comenzar</button>
     </div>
   </div>
+
   <div id="pag2">
-    <img id="fondo" src="https://i.ibb.co/jZmxrqs/Harry-Potter-Wizards-unite-imagen-oficial-1.png" ; />
+    <img id="fondo" src="https://i.ibb.co/jZmxrqs/Harry-Potter-Wizards-unite-imagen-oficial-1.png" ;>
     <div class="contenedor">
 
       <article class="filtro">
-        <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ;>
+        <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
         <select id="casas" class="botones">
           <option value="" selected disabled>Seleccione Casa </option>
           <option value="Gryffindor">Gryffindor</option>
@@ -43,16 +47,15 @@
             <option value="Alumno">Alumno</option>
             <option value="Profesor">Profesor</option>
           </select>
-          <div class="busqueda"> <input type="search" name="busquedamago">
+          <div class="busqueda"> <input type="search" name="busquedamago" size="10">
             <input type="submit" value="Buscar"></div>
         </div>
-    
-        
+        <div id="tarjetas"></div>
       </aside>
-  
+
     </div>
 
- </div>
+  </div>
   <footer>
 
     <p>Wizard United</p>
