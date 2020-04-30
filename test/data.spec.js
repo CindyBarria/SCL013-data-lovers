@@ -1,18 +1,18 @@
-import { example, anotherExample } from '../src/data.js';
+import { filterData } from '../src/data.js';
 
 
-describe('example', () => {
+describe('filterData', () => {
   test('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterData).toBe('function');
   });
 
-  test('returns `example`', () => {
-    expect(example()).toBe('example');
+  test('returns `house`', () => {
+    expect(filterData()).toBe('true');
   });
 });
 
 
-describe('anotherExample', () => {
+/*describe('anotherExample', () => {
   test('is a function', () => {
     expect(typeof anotherExample).toBe('function');
   });
@@ -20,4 +20,4 @@ describe('anotherExample', () => {
   test('returns `anotherExample`', () => {
     expect(anotherExample()).toBe('OMG');
   });
-});
+});*/
