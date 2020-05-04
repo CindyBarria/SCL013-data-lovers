@@ -26,7 +26,6 @@
   text-align: left;
 }
 
-
 #inicio {
   display: flex;
   flex-direction: column;
@@ -92,10 +91,10 @@ h3 {
 
 #fondo {
   position: fixed;
-  left: 0;
+  left: 0px;
   top: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
   z-index: -10;
   visibility: visible;
   background-color: #404863;
@@ -127,7 +126,6 @@ h3 {
 aside {
   width: -moz-available;
   margin: 10px;
-
 }
 
 .contenedorTarjetas {
@@ -227,11 +225,10 @@ footer {
   flex-direction: column;
   align-items: center;
   color: white;
-  background: #16325B;
+  background: #63617fd9;
   border: 1px solid #ffffff7a;
   height: 8%;
   border-radius: 10%;
-
 }
 
 .contenedorM {
@@ -270,7 +267,6 @@ footer {
   display: flex;
   align-items: center;
   flex-direction: column;
-
 }
 
 .foto {
@@ -298,6 +294,48 @@ footer {
   font-weight: bold;
   cursor: pointer;
   z-index: 3;
+}
+
+#imagenVarita {
+  display: flex;
+  width: 100%;
+  height: 177px;
+}
+
+#varitas {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: 4%;
+}
+
+.varitas {
+  padding: 15%;
+  color: white;
+  height: 14%;
+  width: 76%;
+  display: flex;
+  border: 3px solid #2a2b6382;
+  background: #63617fe3;
+  align-items: center;
+  font-size: 15px;
+  line-height: 80%;
+}
+
+.contenedorVarita {
+  height: auto;
+  width: 21%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-top: 2%;
+  margin-left: 4%;
+  /*border: 2px solid red;*/
+}
+
+#divimgVaritas {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 6%;
 }
 
 @media (max-width: 426px) {
@@ -393,17 +431,16 @@ footer {
     font: caption;
     margin-top: 4px;
     margin-left: 17px;
-    width: auto;
+    width: 90px;
     color: white;
     border: 1px solid #404863;
   }
 
   .busqueda {
-    height: 10%;
-    font-size: 60%;
-    margin-left: 37%;
-    margin-top: 2%;
-    background-color: #16325B;
+    height: min-content;
+    font-size: 39%;
+    margin-left: -45%;
+    margin-top: -3%;
   }
 
   .botones {
@@ -420,7 +457,7 @@ footer {
   #tarjetas {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 35%;
+    padding-left: 22%;
   }
 
   .filtro {
@@ -503,4 +540,39 @@ footer {
     cursor: pointer;
     z-index: 3;
   }
+
+  #fondo {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -10;
+    visibility: visible;
+    background-color: #404863;
+  }
+
+  #imagenVarita {
+    display: flex;
+    width: 100%;
+    height: 177px;
+  }
+
+  #varitas {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+
+  .contenedorVarita {
+    height: auto;
+    width: 86%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 2%;
+    margin-left: auto;
+    /*border: 2px solid red;*/
+  }
+
 }
