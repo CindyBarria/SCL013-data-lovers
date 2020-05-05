@@ -136,7 +136,7 @@ const pintarPatronus = (patronusPersonaje) => {
       divPatronus.setAttribute("id", "contenedorPatronus");
       divPatronus.setAttribute("class", "contenedorPatronus");
       const patronus = document.createElement('p');
-      patronus.setAttribute('class', 'patronus');
+      patronus.setAttribute('class', 'patronusP');
       patronus.innerHTML = ` patronus : ${dato.patronus} creador:${dato.name}`;
       divPatronus.appendChild(patronus);
       const divImagenPatronus = document.createElement("div");
