@@ -3,24 +3,26 @@
 
 <head>
   <meta charset="utf-8">
+  <title>Data Lovers</title>
+  <link rel="stylesheet" href="style.css" />
   <meta name="viewport" content="width=device-width, initial-scale=1,
   maximum-scale=1">
-
-  <title> Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-  <div id="portada">
-    <video id="video" loop autoplay preload muted>
-      <source src="./img/loginHp.webm" type="video/webm;" />
-    </video>
-    <div id="inicio">
-      <h1>Bienvenidos al mundo de<br> Harry Potter</h1>
-      <h2>¡Selecciona tu personaje favorito!<br>
-        Escoge una casa , varita y patronus.</h2>
-      <button id="ingresar"> Comenzar</button>
+  <section>
+    <div id="portada">
+      <video id="video" loop autoplay preload muted>
+        <source src="./img/loginHp.webm" type="video/webm;" />
+      </video>
+      <div id="inicio">
+        <h1>Bienvenidos al mundo de<br> Harry Potter</h1>
+        <h2>¡Selecciona tu personaje favorito!<br>
+          Escoge una casa , varita y patronus.</h2>
+        <button id="ingresar"> Comenzar</button>
+      </div>
     </div>
+<<<<<<< HEAD
   </div>
 
   <div id="pag2">
@@ -47,22 +49,46 @@
             <option value="" selected disabled>Seleccione Rol </option>
             <option value="Alumno">Alumno</option>
             <option value="Profesor">Profesor</option>
+=======
+    <div id="pag2">
+      <img id="fondo" src="https://i.ibb.co/b7ZYQKw/FONDO-1.jpg" ;>
+      <div class="contenedor">
+        <article class="filtro">
+          <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
+          <h3>Filtra a los personajes por Casa y Rol</h3>
+          <select id="casas" class="botones">
+            <option value="" selected disabled>Seleccione Casa </option>
+            <option value="Gryffindor">Gryffindor</option>
+            <option value="Hufflepuff">Hufflepuff</option>
+            <option value="Ravenclaw">Ravenclaw</option>
+            <option value="Slytherin">Slytherin</option>
+>>>>>>> aa9c2a985211eab36f52870f99d2243c96b877c6
           </select>
-          <div class="busqueda"> <input type="search" name="busquedamago" size="10">
-            <input type="submit" value="Buscar"></div>
-        </div>
-        <div id="tarjetas"></div>
-      </aside>
-
+          <button id="varita" class="botones">Varita</button>
+          <button id="patronus" class="botones">Patronus</button>
+        </article>
+        <aside class="contenedorTarjetas">
+          <h3>haz click en los personajes y conoce su infomacion</h3>
+          <div class="botonesAside">
+            <select id="rol" class="botonRol">
+              <option value="" selected disabled>Seleccione Rol </option>
+              <option id="alumnos" value="alumnos">Alumnos</option>
+              <option id="profesor" value="profesor">Profesor</option>
+            </select>
+            <div class="busqueda"> <input type="search" name="busquedamago">
+              <input type="submit" value="Buscar"></div>
+          </div>
+          <div id="tarjetas"></div>
+          <div id="varitas"></div>
+          <div id="mostrarPatronus"></div>
+        </aside>
+      </div>
     </div>
-
-  </div>
-  <footer>
-
-    <p>Wizard United</p>
-  </footer>
-
-  <script src="main.js" type="module"></script>
+    <footer>
+      <p>Wizard United</p>
+    </footer>
+    <script src="main.js" type="module"></script>
+  </section>
 </body>
 
 </html>

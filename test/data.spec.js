@@ -1,23 +1,25 @@
-import { example, anotherExample } from '../src/data.js';
+import {
+  filterDataHouse,
+  filterDataPatronus
+} from "../src/data.js";
 
 
-describe('example', () => {
+
+describe('filterDataHouse', () => {
   test('is a function', () => {
-    expect(typeof example).toBe('function');
+    expect(typeof filterDataHouse).toBe('function');
   });
 
-  test('returns `example`', () => {
-    expect(example()).toBe('example');
+  test('returns `house` ', () => {
+    expect(filterDataHouse()).toBe('condition');
   });
 });
 
-
-describe('anotherExample', () => {
+describe('filterDataPatronus', () => {
   test('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
+    expect(typeof filterDataPatronus).toBe('function');
   });
-
-  test('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+  test('returns `patronus` ', () => {
+    expect(filterDataPatronus()).toBe('swan');
   });
 });
