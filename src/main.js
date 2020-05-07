@@ -124,6 +124,12 @@ const pintarVaritas = (varitaPersonaje) => {
 
       document.getElementById("varitas").appendChild(divVarita);
 
+        document.getElementById("rol").style.display = "none";
+        document.getElementById("ordenar").style.display = "none";
+        document.getElementById("encabezadoPersonajes").style.display = "none";
+        document.getElementById("encabezadoPatronus").style.display = "none";
+        document.getElementById("encabezadoVaritas").style.display = "block";
+      
     })
   })
 }
@@ -153,7 +159,12 @@ const pintarPatronus = (patronusPersonaje) => {
       divImagenPatronus.appendChild(imagenPatronus);
 
       document.getElementById("mostrarPatronus").appendChild(divPatronus);
-
+      
+      document.getElementById("rol").style.display = "none";
+      document.getElementById("ordenar").style.display = "none";
+      document.getElementById("encabezadoPersonajes").style.display = "none";
+      document.getElementById("encabezadoVaritas").style.display = "none";
+      document.getElementById("encabezadoPatronus").style.display = "block";
     })
   })
 }
@@ -270,6 +281,7 @@ document.getElementById("pag2").style.display = "none";
 document.getElementById("encabezadoVaritas").style.display = "none";
 document.getElementById("encabezadoPatronus").style.display = "none";
 
+
 const botonIngresar = document.getElementById("ingresar");
 botonIngresar.addEventListener("click", siguiente);
 
@@ -278,24 +290,8 @@ function siguiente() {
   document.getElementById("pag2").style.display = "block";
 }
 
-const varitaBoton = document.getElementById("varita");
-varitaBoton.addEventListener("click", cambiarVarita);
 
-function cambiarVarita() {
-  document.getElementById("rol").style.display = "none";
-  document.getElementById("ordenar").style.display = "none";
-  document.getElementById("encabezadoPersonajes").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("encabezadoVaritas").style.display = "block";
-}
 
-const patronusBoton = document.getElementById("patronus");
-patronusBoton.addEventListener("click", cambiarPatronus);
 
-function cambiarPatronus() {
-  document.getElementById("rol").style.display = "none";
-  document.getElementById("ordenar").style.display = "none";
-  document.getElementById("encabezadoPersonajes").style.display = "none";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "block";
-}
+
+
