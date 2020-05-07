@@ -27,14 +27,11 @@ const pintarPersonajes = (personajes) => {
     //console.log(divNombrePersonaje)
     newDiv.appendChild(personaje)
     // Traer imagen crear etiqueta img 
-    const divImgPersonajes = document.createElement("div");
-    divImgPersonajes.setAttribute("id", "divimgPersonajes");
-    newDiv.appendChild(divImgPersonajes)
     const imagenPersonaje = document.createElement('img');
     imagenPersonaje.setAttribute('src', dato.image);
     imagenPersonaje.setAttribute('class', 'imagePersonaje');
     //console.log(imagenPersonaje)
-    divImgPersonajes.appendChild(imagenPersonaje)
+    newDiv.appendChild(imagenPersonaje)
     // para que se visualice en el id de la segunda pagina
     document.getElementById("tarjetas").appendChild(newDiv)
 
@@ -97,7 +94,7 @@ const pintarPersonajes = (personajes) => {
 //Varitas 
 const pintarVaritas = (varitaPersonaje) => {
   varitaPersonaje.map(dato => {
-    const varitaPersonaje = document.getElementById("varita");
+    const varitaPersonaje = document.getElementById("vari");
     varitaPersonaje.addEventListener('click', () => {
 
       document.getElementById("tarjetas").innerHTML = "";
@@ -124,20 +121,23 @@ const pintarVaritas = (varitaPersonaje) => {
 
       document.getElementById("varitas").appendChild(divVarita);
 
-        document.getElementById("rol").style.display = "none";
-        document.getElementById("ordenar").style.display = "none";
-        document.getElementById("encabezadoPersonajes").style.display = "none";
-        document.getElementById("encabezadoPatronus").style.display = "none";
-        document.getElementById("encabezadoVaritas").style.display = "block";
-      
-    })
-  })
-}
+      document.getElementById("rol").style.display = "none";
+      document.getElementById("ordenar").style.display = "none";
+      document.getElementById("encabezadoPersonajes").style.display = "none";
+      document.getElementById("encabezadoPatronus").style.display = "none";
+      document.getElementById("encabezadoVaritas").style.display = "block";
 
+    })
+
+  })
+
+}
+let resultVarita = filterDataVarita(data);
+pintarVaritas(resultVarita)
 //pintar patronus 
 const pintarPatronus = (patronusPersonaje) => {
   patronusPersonaje.map(dato => {
-    const patronusPersonaje = document.getElementById("patronus");
+    const patronusPersonaje = document.getElementById("patro");
     patronusPersonaje.addEventListener('click', () => {
       document.getElementById("tarjetas").innerHTML = "";
       document.getElementById("varitas").innerHTML = "";
@@ -159,7 +159,6 @@ const pintarPatronus = (patronusPersonaje) => {
       divImagenPatronus.appendChild(imagenPatronus);
 
       document.getElementById("mostrarPatronus").appendChild(divPatronus);
-      
       document.getElementById("rol").style.display = "none";
       document.getElementById("ordenar").style.display = "none";
       document.getElementById("encabezadoPersonajes").style.display = "none";
@@ -182,7 +181,6 @@ selectGry.addEventListener("click", (event) => {
 });
 const selectSly = document.getElementById("Slytherin");
 selectSly.addEventListener("click", (event) => {
-  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
   let resultSly = filterDataHouse(data, "Slytherin");
   event.preventDefault();
   pintarPersonajes(resultSly)
@@ -190,7 +188,6 @@ selectSly.addEventListener("click", (event) => {
 });
 const selectHuff = document.getElementById("Hufflepuff");
 selectHuff.addEventListener("click", (event) => {
-  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
   let resultHuff = filterDataHouse(data, "Hufflepuff");
   event.preventDefault();
   pintarPersonajes(resultHuff)
@@ -198,7 +195,6 @@ selectHuff.addEventListener("click", (event) => {
 });
 const selectRev = document.getElementById("Ravenclaw");
 selectRev.addEventListener("click", (event) => {
-  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
   let resultRev = filterDataHouse(data, "Ravenclaw");
   event.preventDefault();
   pintarPersonajes(resultRev)
@@ -222,14 +218,14 @@ selectRol.addEventListener("change", () => {
   let guardarRol = selectRol.options[selectRol.selectedIndex].value;
   let resultEstudiante = filterDataEstudiante(data, guardarRol);
   let resultProfesor = filterDataProfesor(data, guardarRol);
-  let resultOtros=filterDataOtros(data , guardarRol);
+  let resultOtros = filterDataOtros(data, guardarRol);
 
   if (guardarRol === "alumnos") {
     pintarPersonajes(resultEstudiante)
-  } 
+  }
   if (guardarRol === "profesor") {
     pintarPersonajes(resultProfesor)
-  } else if (guardarRol==="otros"){
+  } else if (guardarRol === "otros") {
     pintarPersonajes(resultOtros)
   }
 
@@ -239,8 +235,7 @@ selectRol.addEventListener("change", () => {
 let resultadoPatronus = filterDataPatronus(data);
 pintarPatronus(resultadoPatronus);
 //filter Varitas
-let resultVarita = filterDataVarita(data);
-pintarVaritas(resultVarita)
+
 
 //ORDEN
 let ordenar = document.getElementById("ordenar");
@@ -289,9 +284,3 @@ function siguiente() {
   document.getElementById("portada").style.display = "none";
   document.getElementById("pag2").style.display = "block";
 }
-
-
-
-
-
-

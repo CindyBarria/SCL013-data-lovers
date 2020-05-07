@@ -1,7 +1,9 @@
-*{
-  margin:0;
-  padding: 0;;
+* {
+  margin: 0;
+  padding: 0;
+  ;
 }
+
 @font-face {
   font-family: "harry_pregular";
   src: url('./img/HARRYP__.TTF');
@@ -15,6 +17,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 #video {
   position: absolute;
   left: 0;
@@ -93,12 +96,13 @@ h3 {
 }
 
 nav {
-  background:#404863;
+  background: #404863;
   height: 100%;
   width: 100%;
   margin: 20%;
 }
-.items label{
+
+.items label {
   position: relative;
   background: #16325b;
   width: 93%;
@@ -109,50 +113,55 @@ nav {
   color: white;
   align-items: center;
 }
-.items label:active { 
-  background-color:#155288;
- }
 
-.items label:hover{
-  background:#155288;
+.items label:active {
+  background-color: #155288;
+}
+
+.items label:hover {
+  background: #155288;
 
 }
-.items label span{
+
+.items label span {
   position: absolute;
   top: 40%;
   right: 19px;
-  }
-.items ul{
+}
+
+.items ul {
   width: 100%;
   list-style: none;
   overflow: hidden;
   max-height: 0;
   transition: all .4s linear;
 }
-.items ul li a{
+
+.items ul li a {
   width: 100%;
   height: 17px;
   padding: 10px;
   display: block;
-text-decoration: none;
-background-color: #3f659dc9;
-color: white;
-border:1px solid rgba(158, 158, 158, 0.76);
+  text-decoration: none;
+  background-color: #3f659dc9;
+  color: white;
+  border: 1px solid rgba(158, 158, 158, 0.76);
 
 }
-.items ul li a:hover{
-background: #155288;
+
+.items ul li a:hover {
+  background: #155288;
 }
-.items input:checked ~ ul{
+
+.items input:checked~ul {
   height: auto;
   max-height: 200px;
   transform: all;
 }
-.items input{
+
+.items input {
   display: none;
 }
-
-
 
 #fondo {
   position: fixed;
@@ -258,6 +267,7 @@ option {
   margin-left: 3%;
   width: 18%;
 }
+
 .busqueda {
   height: 10%;
   font-size: 60%;
@@ -285,28 +295,22 @@ footer {
   border-bottom: 2px solid #ffffffa6;
   border-left: 2px solid #000000de;
   border-top: 2px solid #000000d9;
-  margin: 8%;
+  margin: 9%;
   cursor: pointer;
 }
 
-#divimgPersonajes{
-  display: flex;
-  flex-wrap: wrap;
-  padding-left: 6%;
-}
+
 #contenido {
-  height: auto;
-  width: 24%;
+  margin-top: 4%;
   display: flex;
   flex-direction: column-reverse;
-  justify-content: center;
-  margin-top: 4%;
-
+  margin: 2%;
 }
 
 #tarjetas {
   display: flex;
   flex-wrap: wrap;
+  padding: 1%;
 
 }
 
@@ -320,9 +324,9 @@ footer {
   border: 3px solid #2a2b6382;
   height: 40px;
   border-radius: 10%;
-  width: 78%;
-  margin-left: 14%;
-  margin-top: -4%;
+  width: 92%;
+  margin-left: 12%;
+  margin-top: -2%;
 }
 
 
@@ -438,8 +442,9 @@ footer {
   flex-wrap: wrap;
   padding-left: 6%;
 }
+
 /*patronus*/
-#mostrarPatronus{
+#mostrarPatronus {
   flex-direction: row;
   display: flex;
   flex-wrap: wrap;
@@ -448,14 +453,16 @@ footer {
   margin-left: 2%;
 }
 
-#contenedorPatronus{
+#contenedorPatronus {
   width: 30%;
   display: flex;
   flex-direction: column-reverse;
 }
-#contenedorImagen{
+
+#contenedorImagen {
   text-align: center;
 }
+
 #imagenPatronus {
   display: flex;
   width: 75%;
@@ -463,7 +470,8 @@ footer {
   border: 2px solid #000000d9;
 
 }
-.patronusP{
+
+.patronusP {
   padding: 11%;
   color: white;
   height: 4%;
@@ -577,6 +585,7 @@ footer {
     color: white;
     border: 1px solid #404863;
   }
+
   .botonOrden {
     background-color: #16325B;
     font: caption;
@@ -585,6 +594,7 @@ footer {
     color: white;
     border: 1px solid #404863;
   }
+
   .busqueda {
     height: auto;
     width: 77%;
@@ -660,6 +670,47 @@ footer {
     margin-top: 27%;
   }
 
+  #contenido {
+    height: auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    margin-top: 4%;
+    margin-left: -14%;
+  }
+
+
+  .nombre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    background: #63617f;
+    border: 3px solid #2a2b6382;
+    height: 40px;
+    border-radius: 10%;
+    width: 75%;
+    margin-left: 15%;
+    margin-top: -4%;
+  }
+
+  .imagePersonaje {
+    display: flex;
+    box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
+    width: 189px;
+    height: 266px;
+    border-radius: 18px;
+    border-right: 2px solid #ffffff7d;
+    border-bottom: 2px solid #ffffffa6;
+    border-left: 2px solid #000000de;
+    border-top: 2px solid #000000d9;
+    margin: 8%;
+    cursor: pointer;
+    margin-left: 13%;
+  }
+
   .foto {
     position: absolute;
     width: 69%;
@@ -711,6 +762,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
+
   .varitas {
     padding: 12%;
     color: white;
@@ -726,6 +778,7 @@ footer {
     margin-left: 6%;
     margin-top: 3%;
   }
+
   .contenedorVarita {
     height: auto;
     width: 86%;
@@ -737,48 +790,53 @@ footer {
   }
 
   /*patronus*/
-#mostrarPatronus{
-  flex-direction: row;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  margin-top: 10%;
-}
+  #mostrarPatronus {
+    flex-direction: row;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10%;
+  }
 
-#contenedorPatronus{
-  width: 98%;
-}
-#contenedorImagen{ 
-  text-align: center;
-}
-#imagenPatronus {
-  display: flex;
-  width: 75%;
-  height: auto;
-  margin-left: 20%;
-}
-.patronusP{
-  padding: 11%;
-  color: white;
-  width: 61%;
-  display: flex;
-  border: 3px solid #2a2b6382;
-  background: #63617fe3;
-  align-items: center;
-  line-height: 80%;
-  margin: 1%;
-  height: 2%;
-  margin-left: 48px;
-}
-.items label{
-  position: relative;
-  background: #16325b;
-  width: 83%;
-  height: 40px;
-  padding: 10px;
-  display: flex;
-  border: 1px solid #717171;
-  color: white;
-  align-items: center;
-}
+  #contenedorPatronus {
+    width: 98%;
+  }
+
+  #contenedorImagen {
+    text-align: center;
+  }
+
+  #imagenPatronus {
+    display: flex;
+    width: 75%;
+    height: auto;
+    margin-left: 20%;
+  }
+
+  .patronusP {
+    padding: 11%;
+    color: white;
+    width: 61%;
+    display: flex;
+    border: 3px solid #2a2b6382;
+    background: #63617fe3;
+    align-items: center;
+    line-height: 80%;
+    margin: 1%;
+    height: 2%;
+    margin-left: 48px;
+  }
+
+  .items label {
+    position: relative;
+    background: #16325b;
+    width: 83%;
+    height: 40px;
+    padding: 10px;
+    display: flex;
+    border: 1px solid #717171;
+    color: white;
+    align-items: center;
+  }
+
 }

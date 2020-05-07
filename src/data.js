@@ -25,6 +25,7 @@ export const filterDataVarita = (data) => {
   return varita
 
 };
+
 export const filterDataPatronus = (data) => {
   let patronus = data.filter((dato) => dato.patronus !== '');
   return patronus;
