@@ -14,6 +14,11 @@ export const filterDataProfesor = (data) => {
   return profesor
 
 };
+export const filterDataOtros = (data) => {
+  let otros = data.filter((dato) => dato.hogwartsStaff === false && dato.hogwartsStudent === false );
+  return otros
+
+};
 
 export const filterDataVarita = (data) => {
   let varita = data.filter((dato) => dato.wand.wood !== '' || dato.wand.core !== '' || dato.wand.length !== '');

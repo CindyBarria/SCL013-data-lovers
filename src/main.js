@@ -4,7 +4,8 @@ import {
   filterDataEstudiante,
   filterDataProfesor,
   filterDataVarita,
-  filterDataPatronus
+  filterDataPatronus,
+  filterDataOtros
 } from "./data.js";
 
 //Traer data a un const 
@@ -26,11 +27,14 @@ const pintarPersonajes = (personajes) => {
     //console.log(divNombrePersonaje)
     newDiv.appendChild(personaje)
     // Traer imagen crear etiqueta img 
+    const divImgPersonajes = document.createElement("div");
+    divImgPersonajes.setAttribute("id", "divimgPersonajes");
+    newDiv.appendChild(divImgPersonajes)
     const imagenPersonaje = document.createElement('img');
     imagenPersonaje.setAttribute('src', dato.image);
     imagenPersonaje.setAttribute('class', 'imagePersonaje');
     //console.log(imagenPersonaje)
-    personaje.appendChild(imagenPersonaje)
+    divImgPersonajes.appendChild(imagenPersonaje)
     // para que se visualice en el id de la segunda pagina
     document.getElementById("tarjetas").appendChild(newDiv)
 
@@ -137,7 +141,8 @@ const pintarPatronus = (patronusPersonaje) => {
       divPatronus.setAttribute("class", "contenedorPatronus");
       const patronus = document.createElement('p');
       patronus.setAttribute('class', 'patronusP');
-      patronus.innerHTML = ` patronus : ${dato.patronus} creador:${dato.name}`;
+      patronus.innerHTML = ` Patronus : ${dato.patronus}<br> 
+      <br>Creador: ${dato.name}`;
       divPatronus.appendChild(patronus);
       const divImagenPatronus = document.createElement("div");
       divImagenPatronus.setAttribute("id", "contenedorImagen");
@@ -155,26 +160,66 @@ const pintarPatronus = (patronusPersonaje) => {
 
 //seleccionar casas
 
-
 pintarPersonajes(datos)
-const selectCasas = document.getElementById("casas");
-selectCasas.addEventListener("change", () => {
-  let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
-  let result = filterDataHouse(data, guardarCasas);
-  pintarPersonajes(result)
+
+const selectGry = document.getElementById("Gryffindor");
+selectGry.addEventListener("click", (event) => {
+  let resultGry = filterDataHouse(data, "Gryffindor");
+  event.preventDefault();
+  pintarPersonajes(resultGry)
 
 });
+const selectSly = document.getElementById("Slytherin");
+selectSly.addEventListener("click", (event) => {
+  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
+  let resultSly = filterDataHouse(data, "Slytherin");
+  event.preventDefault();
+  pintarPersonajes(resultSly)
+
+});
+const selectHuff = document.getElementById("Hufflepuff");
+selectHuff.addEventListener("click", (event) => {
+  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
+  let resultHuff = filterDataHouse(data, "Hufflepuff");
+  event.preventDefault();
+  pintarPersonajes(resultHuff)
+
+});
+const selectRev = document.getElementById("Ravenclaw");
+selectRev.addEventListener("click", (event) => {
+  //let guardarCasas = selectCasas.options[selectCasas.selectedIndex].text;
+  let resultRev = filterDataHouse(data, "Ravenclaw");
+  event.preventDefault();
+  pintarPersonajes(resultRev)
+
+});
+const selectAll = document.getElementById("Todos");
+selectAll.addEventListener("click", (event) => {
+  document.getElementById("rol").style.display = "block";
+  document.getElementById("ordenar").style.display = "block";
+  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  event.preventDefault();
+  pintarPersonajes(datos)
+
+});
+
 //seleccionar Rol
 const selectRol = document.getElementById("rol");
 selectRol.addEventListener("change", () => {
   let guardarRol = selectRol.options[selectRol.selectedIndex].value;
   let resultEstudiante = filterDataEstudiante(data, guardarRol);
   let resultProfesor = filterDataProfesor(data, guardarRol);
+  let resultOtros=filterDataOtros(data , guardarRol);
 
   if (guardarRol === "alumnos") {
     pintarPersonajes(resultEstudiante)
-  } else if (guardarRol === "profesor") {
+  } 
+  if (guardarRol === "profesor") {
     pintarPersonajes(resultProfesor)
+  } else if (guardarRol==="otros"){
+    pintarPersonajes(resultOtros)
   }
 
 })
@@ -186,9 +231,44 @@ pintarPatronus(resultadoPatronus);
 let resultVarita = filterDataVarita(data);
 pintarVaritas(resultVarita)
 
+//ORDEN
+let ordenar = document.getElementById("ordenar");
+ordenar.addEventListener("change", () => {
+  let guardarOrden = ordenar.options[ordenar.selectedIndex].value;
+  if (guardarOrden === "a") {
+    const ascendente = (datos.sort(function (a, b) {
+      if (a.name > b.name) {
+        return 1;
+      }
+      if (a.name < b.name) {
+        return -1
+      }
+      return 0
+
+    }));
+    pintarPersonajes(ascendente)
+
+  } else if (guardarOrden === "d") {
+    const descendente = (datos.sort(function (a, b) {
+      if (a.name < b.name) {
+        return 1;
+      }
+      if (a.name > b.name) {
+        return -1
+      }
+      return 0
+
+    }));
+    pintarPersonajes(descendente)
+  }
+
+})
+
 //ocultar y mostrar
 document.getElementById("portada").style.display = "block";
 document.getElementById("pag2").style.display = "none";
+document.getElementById("encabezadoVaritas").style.display = "none";
+document.getElementById("encabezadoPatronus").style.display = "none";
 
 const botonIngresar = document.getElementById("ingresar");
 botonIngresar.addEventListener("click", siguiente);
@@ -196,4 +276,26 @@ botonIngresar.addEventListener("click", siguiente);
 function siguiente() {
   document.getElementById("portada").style.display = "none";
   document.getElementById("pag2").style.display = "block";
+}
+
+const varitaBoton = document.getElementById("varita");
+varitaBoton.addEventListener("click", cambiarVarita);
+
+function cambiarVarita() {
+  document.getElementById("rol").style.display = "none";
+  document.getElementById("ordenar").style.display = "none";
+  document.getElementById("encabezadoPersonajes").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("encabezadoVaritas").style.display = "block";
+}
+
+const patronusBoton = document.getElementById("patronus");
+patronusBoton.addEventListener("click", cambiarPatronus);
+
+function cambiarPatronus() {
+  document.getElementById("rol").style.display = "none";
+  document.getElementById("ordenar").style.display = "none";
+  document.getElementById("encabezadoPersonajes").style.display = "none";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "block";
 }

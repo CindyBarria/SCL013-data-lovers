@@ -1,3 +1,7 @@
+*{
+  margin:0;
+  padding: 0;;
+}
 @font-face {
   font-family: "harry_pregular";
   src: url('./img/HARRYP__.TTF');
@@ -11,7 +15,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 #video {
   position: absolute;
   left: 0;
@@ -34,10 +37,10 @@
   border-radius: 10%;
   z-index: 2;
   position: relative;
-  top: 35px;
-  margin-left: 19%;
-  margin-right: 19%;
-  margin-top: auto;
+  margin-left: 22%;
+  margin-right: 22%;
+  margin-top: 3%;
+  padding: 4%;
 }
 
 h1 {
@@ -88,6 +91,68 @@ h3 {
   color: #ffffff;
   background-color: #1c5671;
 }
+
+nav {
+  background:#404863;
+  height: 100%;
+  width: 100%;
+  margin: 20%;
+}
+.items label{
+  position: relative;
+  background: #16325b;
+  width: 93%;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid #717171;
+  color: white;
+  align-items: center;
+}
+.items label:active { 
+  background-color:#155288;
+ }
+
+.items label:hover{
+  background:#155288;
+
+}
+.items label span{
+  position: absolute;
+  top: 40%;
+  right: 19px;
+  }
+.items ul{
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all .4s linear;
+}
+.items ul li a{
+  width: 100%;
+  height: 17px;
+  padding: 10px;
+  display: block;
+text-decoration: none;
+background-color: #3f659dc9;
+color: white;
+border:1px solid rgba(158, 158, 158, 0.76);
+
+}
+.items ul li a:hover{
+background: #155288;
+}
+.items input:checked ~ ul{
+  height: auto;
+  max-height: 200px;
+  transform: all;
+}
+.items input{
+  display: none;
+}
+
+
 
 #fondo {
   position: fixed;
@@ -141,6 +206,7 @@ aside {
   height: 20%;
   font-size: 60%;
   font: caption;
+  margin-top: 5%;
 }
 
 .seleccion {
@@ -171,18 +237,27 @@ option {
 
 .botonRol {
   background-color: #16325B;
-  ;
   height: 84%;
   font-size: 60%;
   font: caption;
   margin-top: 4px;
-  margin-left: 17px;
-  width: 26%;
   color: white;
   border: 1px solid #404863;
+  margin-left: 3%;
+  width: 18%;
 }
 
-
+.botonOrden {
+  background-color: #16325B;
+  height: 84%;
+  font-size: 60%;
+  font: caption;
+  margin-top: 4px;
+  color: white;
+  border: 1px solid #404863;
+  margin-left: 3%;
+  width: 18%;
+}
 .busqueda {
   height: 10%;
   font-size: 60%;
@@ -206,31 +281,50 @@ footer {
   width: 189px;
   height: 266px;
   border-radius: 18px;
-  border: 2px solid #000000bf;
+  border-right: 2px solid #ffffff7d;
+  border-bottom: 2px solid #ffffffa6;
+  border-left: 2px solid #000000de;
+  border-top: 2px solid #000000d9;
   margin: 8%;
   cursor: pointer;
 }
 
+#divimgPersonajes{
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 6%;
+}
 #contenido {
-  margin: 2%;
+  height: auto;
+  width: 24%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  margin-top: 4%;
+
 }
 
 #tarjetas {
   display: flex;
   flex-wrap: wrap;
-  padding-left: 6%;
+
 }
 
 .nombre {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   color: white;
-  background: #63617fd9;
-  border: 1px solid #ffffff7a;
-  height: 8%;
+  background: #63617f;
+  border: 3px solid #2a2b6382;
+  height: 40px;
   border-radius: 10%;
+  width: 78%;
+  margin-left: 14%;
+  margin-top: -4%;
 }
+
 
 .contenedorM {
   position: fixed;
@@ -301,30 +395,36 @@ footer {
   display: flex;
   width: 100%;
   height: 177px;
+  border: 2px solid #000000d9;
+
 }
 
 #varitas {
   display: flex;
   flex-wrap: wrap;
   margin-right: 4%;
+  margin-top: 7%;
 }
 
 .varitas {
-  padding: 15%;
+  padding: 13%;
   color: white;
-  height: 14%;
-  width: 76%;
+  height: 11%;
+  width: 68%;
   display: flex;
   border: 3px solid #2a2b6382;
   background: #63617fe3;
   align-items: center;
   font-size: 15px;
   line-height: 80%;
+  border-radius: 4%;
+  margin-top: 2%;
+  margin-left: 6%;
 }
 
 .contenedorVarita {
   height: auto;
-  width: 21%;
+  width: 28%;
   display: flex;
   flex-direction: column-reverse;
   justify-content: center;
@@ -344,24 +444,38 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
+  margin-top: 1%;
+  margin-left: 2%;
 }
 
 #contenedorPatronus{
   width: 30%;
+  display: flex;
+  flex-direction: column-reverse;
 }
 #contenedorImagen{
   text-align: center;
 }
+#imagenPatronus {
+  display: flex;
+  width: 75%;
+  height: auto;
+  border: 2px solid #000000d9;
+
+}
 .patronusP{
   padding: 11%;
   color: white;
-  width: 76%;
+  height: 4%;
+  width: 53%;
   display: flex;
   border: 3px solid #2a2b6382;
   background: #63617fe3;
   align-items: center;
   font-size: 15px;
   line-height: 80%;
+  border-radius: 4%;
+  margin-top: 2%;
 }
 
 @media (max-width: 426px) {
@@ -388,9 +502,10 @@ footer {
     border-radius: 10%;
     z-index: 2;
     position: relative;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 10%;
+    margin-right: 10%;
     margin-top: 24%;
+    padding: 5%;
   }
 
   h1 {
@@ -418,6 +533,7 @@ footer {
     border: 2px solid #393956;
     background: #63617f;
     padding: 2%;
+    margin-left: 10%;
   }
 
   #ingresar {
@@ -446,27 +562,36 @@ footer {
   }
 
   .botonesAside {
-    z-index: 1;
+    z-index: 0;
     font: caption;
     margin-left: 60px;
+    display: flex;
+    flex-direction: column;
   }
 
   .botonRol {
     background-color: #16325B;
-
     font: caption;
-    margin-top: 20px;
-    margin-left: 17px;
-    width: 90px;
+    width: 78%;
+    padding: 6%;
     color: white;
     border: 1px solid #404863;
   }
-
+  .botonOrden {
+    background-color: #16325B;
+    font: caption;
+    width: 78%;
+    padding: 6%;
+    color: white;
+    border: 1px solid #404863;
+  }
   .busqueda {
-    height: min-content;
-    font-size: 39%;
-    margin-left: -45%;
-    margin-top: -3%;
+    height: auto;
+    width: 77%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 3%;
+    margin-right: auto;
   }
 
   .botones {
@@ -586,7 +711,21 @@ footer {
     display: flex;
     flex-wrap: wrap;
   }
-
+  .varitas {
+    padding: 12%;
+    color: white;
+    height: 11%;
+    width: 70%;
+    display: flex;
+    border: 3px solid #2a2b6382;
+    background: #63617fe3;
+    align-items: center;
+    font-size: 15px;
+    line-height: 80%;
+    border-radius: 4%;
+    margin-left: 6%;
+    margin-top: 3%;
+  }
   .contenedorVarita {
     height: auto;
     width: 86%;
@@ -612,6 +751,12 @@ footer {
 #contenedorImagen{ 
   text-align: center;
 }
+#imagenPatronus {
+  display: flex;
+  width: 75%;
+  height: auto;
+  margin-left: 20%;
+}
 .patronusP{
   padding: 11%;
   color: white;
@@ -620,10 +765,20 @@ footer {
   border: 3px solid #2a2b6382;
   background: #63617fe3;
   align-items: center;
-  font-size: 119%;
   line-height: 80%;
   margin: 1%;
   height: 2%;
-  margin-left: 34px;
+  margin-left: 48px;
+}
+.items label{
+  position: relative;
+  background: #16325b;
+  width: 83%;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid #717171;
+  color: white;
+  align-items: center;
 }
 }
