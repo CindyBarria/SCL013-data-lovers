@@ -15,6 +15,7 @@ Nuestras historias de usuario  se dividieron de la siguiente forma:
 
 Nuestro primer prototipo fue diseñado de manera simple cubriendo las necesdades del usuario como se muestra a continuacion.
 <a href="https://ibb.co/LPT7Y8w"><img src="https://i.ibb.co/4fbrK7y/Prototipo1.png" alt="Prototipo1" border="0"></a>
-Luego se diseño un prototipo de alta fidelidad donde se le dio estilo y aplico paleta de colores de harry potter ademas d e la fuente que se utilizaria y orden de nuestra pagina.
-<a href="https://ibb.co/mD7j2HY"><img src="https://i.ibb.co/j6FNQLx/Prototipo-Alta-Fidelidad.png" alt="Prototipo-Alta-Fidelidad" border="0"></a>
+<br>
+Luego se diseño un prototipo de alta fidelidad donde se le dio estilo y aplico paleta de colores de harry potter ademas d e la fuente que se utilizaria y orden de nuestra pagina.<br>
+<a href="https://ibb.co/mD7j2HY"><img src="https://i.ibb.co/j6FNQLx/Prototipo-Alta-Fidelidad.png" alt="Prototipo-Alta-Fidelidad" border="0"></
 .
