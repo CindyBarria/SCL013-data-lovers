@@ -95,73 +95,85 @@ h3 {
   background-color: #1c5671;
 }
 
-nav {
-  background: #404863;
-  height: 100%;
-  width: 100%;
-  margin: 20%;
-}
-
-.items label {
-  position: relative;
-  background: #16325b;
-  width: 93%;
-  height: 40px;
-  padding: 10px;
-  display: flex;
-  border: 1px solid #717171;
-  color: white;
-  align-items: center;
-}
-
-.items label:active {
-  background-color: #155288;
-}
-
-.items label:hover {
-  background: #155288;
-
-}
-
-.items label span {
-  position: absolute;
-  top: 40%;
-  right: 19px;
-}
-
-.items ul {
-  width: 100%;
-  list-style: none;
-  overflow: hidden;
-  max-height: 0;
-  transition: all .4s linear;
-}
-
-.items ul li a {
-  width: 100%;
-  height: 17px;
-  padding: 10px;
-  display: block;
-  text-decoration: none;
-  background-color: #3f659dc9;
-  color: white;
-  border: 1px solid rgba(158, 158, 158, 0.76);
-
-}
-
-.items ul li a:hover {
-  background: #155288;
-}
-
-.items input:checked~ul {
-  height: auto;
-  max-height: 200px;
-  transform: all;
-}
-
-.items input {
+article label{
   display: none;
 }
+.menu{
+position: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #404863;
+  width: 23%;
+  height: 96%;
+  margin-top: 0.7%;
+}
+
+#btn-menu{
+display:none;
+}
+#casas{
+  width: 100%;
+}
+.menu .items label {
+position: relative;
+background: #16325b;
+width: 93%;
+height: 40px;
+padding: 10px;
+display: flex;
+border: 1px solid #717171;
+color: white;
+align-items: center;
+margin: 0;
+}
+
+
+.menu .items label:hover {
+background: #155288;
+
+}
+
+.menu .items label span {
+position: absolute;
+top: 40%;
+right: 19px;
+}
+
+.menu .items ul {
+width: 100%;
+list-style: none;
+overflow: hidden;
+max-height: 0;
+transition: all .4s linear;
+}
+
+.menu .items ul li a {
+width: 100%;
+height: 17px;
+padding: 10px;
+display: block;
+text-decoration: none;
+background-color: #3f659dc9;
+color: white;
+border: 1px solid rgba(158, 158, 158, 0.76);
+
+}
+
+.menu .items ul li a:hover {
+background: #155288;
+}
+
+.menu .items input:checked~ul {
+height: auto;
+max-height: 200px;
+transform: all;
+}
+
+.menu .items input {
+display: none;
+}
+
 
 #fondo {
   position: fixed;
@@ -540,8 +552,11 @@ footer {
     word-spacing: 3px;
     border: 2px solid #393956;
     background: #63617f;
-    padding: 2%;
+    padding: 3%;
     margin-left: 10%;
+    margin-top: -1.6%;
+    width: 83%;
+    height: 29px;
   }
 
   #ingresar {
@@ -558,7 +573,7 @@ footer {
     margin-top: 7%;
   }
 
-  .contenedor {
+  #contenedor {
     display: flex;
     flex-direction: row;
   }
@@ -566,7 +581,8 @@ footer {
   .contenedorTarjetas {
     display: flex;
     flex-direction: column;
-    margin-left: 24.5%;
+    margin-left: 0%;
+    width: 100%;
   }
 
   .botonesAside {
@@ -581,7 +597,7 @@ footer {
     background-color: #16325B;
     font: caption;
     width: 78%;
-    padding: 6%;
+    padding: 2%;
     color: white;
     border: 1px solid #404863;
   }
@@ -590,7 +606,7 @@ footer {
     background-color: #16325B;
     font: caption;
     width: 78%;
-    padding: 6%;
+    padding: 2%;
     color: white;
     border: 1px solid #404863;
   }
@@ -618,7 +634,7 @@ footer {
   #tarjetas {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 22%;
+    padding-left: 15%;
   }
 
   .filtro {
@@ -672,7 +688,7 @@ footer {
 
   #contenido {
     height: auto;
-    width: 100%;
+    width: 62%;
     display: flex;
     flex-direction: column-reverse;
     justify-content: center;
@@ -691,7 +707,7 @@ footer {
     border: 3px solid #2a2b6382;
     height: 40px;
     border-radius: 10%;
-    width: 75%;
+    width: 57%;
     margin-left: 15%;
     margin-top: -4%;
   }
@@ -699,8 +715,8 @@ footer {
   .imagePersonaje {
     display: flex;
     box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
-    width: 189px;
-    height: 266px;
+    width: 127px;
+    height: 184px;
     border-radius: 18px;
     border-right: 2px solid #ffffff7d;
     border-bottom: 2px solid #ffffffa6;
@@ -754,20 +770,21 @@ footer {
 
   #imagenVarita {
     display: flex;
-    width: 100%;
-    height: 177px;
+    width: 76%;
+    height: 159px;
   }
 
   #varitas {
     display: flex;
     flex-wrap: wrap;
+        padding-left: 7%;
   }
 
   .varitas {
     padding: 12%;
     color: white;
     height: 11%;
-    width: 70%;
+width: 47%;
     display: flex;
     border: 3px solid #2a2b6382;
     background: #63617fe3;
@@ -808,23 +825,23 @@ footer {
 
   #imagenPatronus {
     display: flex;
-    width: 75%;
+    width: 58%;
     height: auto;
     margin-left: 20%;
   }
 
   .patronusP {
-    padding: 11%;
+padding: 10%;
     color: white;
-    width: 61%;
+    width: 38%;
     display: flex;
     border: 3px solid #2a2b6382;
     background: #63617fe3;
     align-items: center;
     line-height: 80%;
     margin: 1%;
-    height: 2%;
-    margin-left: 48px;
+    height: 0%;
+    margin-left: 78px;
   }
 
   .items label {
@@ -836,7 +853,48 @@ footer {
     display: flex;
     border: 1px solid #717171;
     color: white;
-    align-items: center;
+
   }
+article{
+    width: 6%;
+    margin-top: 6px;
+    height: 4%;
+    position: fixed;
+    z-index:1;
+}
+article label{
+    display: block;
+    color: white;
+    padding: 45%;
+    border: 2px solid #404863;
+    background: #63617f;
+    cursor: pointer;
+    text-align: center;
+    width: 74%;
+    margin-left: 5%;
+    margin-top: -2px;
+    height: 82%;
+}
+.menu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #404863;
+    width: 72%;
+    height: 96%;
+    margin-left: -320px;
+    z-index:1;
+transition: all 0.5s;
+}
+
+#btn-menu{
+display:none;
+}
+
+
+#btn-menu:checked ~ .menu{
+  margin:0;
+}
 
 }

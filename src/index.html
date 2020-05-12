@@ -26,9 +26,14 @@
     <img id="fondo" src="https://i.ibb.co/b7ZYQKw/FONDO-1.jpg" ;>
     <div class="contenedor">
 
-      <article class="filtro">
-        <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
-        <nav>
+
+
+      <article>
+        <input type="checkbox" id="btn-menu">
+        <label for="btn-menu" alt=""><span class=" fas fa-bars"></span>
+        </label>
+        <nav class="menu">
+          <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
           <div id="casas" class="items">
             <input type="checkbox" id="check1">
             <label for="check1">Casas
@@ -41,25 +46,26 @@
               <li id="Ravenclaw"><a href="">Ravenclaw</a></li>
               <li id="Todos"><a href="">Todos</a></li>
             </ul>
-          </div>
-          <div id="varita" class="items">
-            <input type="checkbox" id="check2">
-            <label id="vari" for="check2">Varitas
-              <span class="fas fa-magic"></span>
-            </label>
-          </div>
-          <div id="patronus" class="items">
-            <input type="checkbox" id="check3">
-            <label id="patro" for="check3">Patronus
-              <span class=" fas fa-horse"></span>
-            </label>
+
+            <div id="varita" class="items">
+              <input type="checkbox" id="check2">
+              <label id="vari" for="check2">Varitas
+                <span class="fas fa-magic"></span>
+              </label>
+            </div>
+            <div id="patronus" class="items">
+              <input type="checkbox" id="check3">
+              <label id="patro" for="check3">Patronus
+                <span class=" fas fa-horse"></span>
+              </label>
+            </div>
           </div>
         </nav>
       </article>
 
       <aside class="contenedorTarjetas">
         <h3 id="encabezadoPersonajes">haz click en los personajes y conoce su infomacion</h3>
-        <h3 id="encabezadoVaritas">La varita es quien elije al mago, el "porque" no siempre es claro... </h3>
+        <h3 id="encabezadoVaritas">La varita es quien elije al mago... </h3>
         <h3 id="encabezadoPatronus"> ¡ EXPECTO PATRONUM ! </h3>
         <div class="botonesAside">
           <select id="rol" class="botonRol">
@@ -73,8 +79,10 @@
             <option id="ascendente" value="a">A-Z</option>
             <option id="descendente" value="d">Z-A</option>
           </select>
-          <div class="busqueda"> <input type="search" name="busquedamago">
-            <input type="submit" value="Buscar"></div>
+          <div class="busqueda">
+            <input type="name" id="name-example" placeholder="Busca tu mago" name="nombreUsuario" required />
+            <button id="buscar">Buscar</button>
+          </div>
         </div>
         <div id="tarjetas"></div>
         <div id="varitas"></div>

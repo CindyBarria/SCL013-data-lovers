@@ -5,7 +5,8 @@ import {
   filterDataProfesor,
   filterDataVarita,
   filterDataPatronus,
-  filterDataOtros
+  filterDataOtros,
+  buscador
 } from "./data.js";
 
 //Traer data a un const 
@@ -268,6 +269,14 @@ ordenar.addEventListener("change", () => {
     pintarPersonajes(descendente)
   }
 
+})
+
+//buscador
+var botonBuscar = document.getElementById("buscar");
+botonBuscar.addEventListener("click", () => {
+  var nombre = document.getElementById("name-example").value;
+  var buscado = buscador(data,nombre)
+  pintarPersonajes(buscado)
 })
 
 //ocultar y mostrar

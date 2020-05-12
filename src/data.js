@@ -1,4 +1,5 @@
 export const filterDataHouse = (data, condition) => {
+  console.log(condition)
   let house = data.filter((dato) => dato.house === condition);
   return house
 };
@@ -15,7 +16,7 @@ export const filterDataProfesor = (data) => {
 
 };
 export const filterDataOtros = (data) => {
-  let otros = data.filter((dato) => dato.hogwartsStaff === false && dato.hogwartsStudent === false );
+  let otros = data.filter((dato) => dato.hogwartsStaff === false && dato.hogwartsStudent === false);
   return otros
 
 };
@@ -30,3 +31,7 @@ export const filterDataPatronus = (data) => {
   let patronus = data.filter((dato) => dato.patronus !== '');
   return patronus;
 };
+
+export const buscador = (data,nombre) => {
+  return data.filter((dato) => dato.name.toLowerCase().includes(nombre))
+}
