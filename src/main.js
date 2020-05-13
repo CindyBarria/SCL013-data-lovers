@@ -88,6 +88,7 @@ const pintarPersonajes = (personajes) => {
       divcontenedor.classList.add("contenedorMActivo");
       span.addEventListener('click', () => {
         divcontenedor.classList.remove("contenedorMActivo");
+
       })
     })
   })
@@ -119,7 +120,6 @@ const pintarVaritas = (varitaPersonaje) => {
       varitaImagen.setAttribute("src", dato.wandImage);
       varitaImagen.setAttribute("id", "imagenVarita")
       divImgVaritas.appendChild(varitaImagen);
-
       document.getElementById("varitas").appendChild(divVarita);
 
       document.getElementById("rol").style.display = "none";
@@ -127,14 +127,15 @@ const pintarVaritas = (varitaPersonaje) => {
       document.getElementById("encabezadoPersonajes").style.display = "none";
       document.getElementById("encabezadoPatronus").style.display = "none";
       document.getElementById("encabezadoVaritas").style.display = "block";
+      document.getElementById("contenedorBusqueda").style.display = "none";
+
 
     })
 
   })
 
 }
-let resultVarita = filterDataVarita(data);
-pintarVaritas(resultVarita)
+
 //pintar patronus 
 const pintarPatronus = (patronusPersonaje) => {
   patronusPersonaje.map(dato => {
@@ -158,20 +159,20 @@ const pintarPatronus = (patronusPersonaje) => {
       imagenPatronus.setAttribute("src", dato.patronusImage)
       imagenPatronus.setAttribute("id", "imagenPatronus");
       divImagenPatronus.appendChild(imagenPatronus);
-
       document.getElementById("mostrarPatronus").appendChild(divPatronus);
-      document.getElementById("rol").style.display = "none";
-      document.getElementById("ordenar").style.display = "none";
+
+      document.getElementById("encabezadoPatronus").style.display = "block";
       document.getElementById("encabezadoPersonajes").style.display = "none";
       document.getElementById("encabezadoVaritas").style.display = "none";
-      document.getElementById("encabezadoPatronus").style.display = "block";
+      document.getElementById("rol").style.display = "none";
+      document.getElementById("ordenar").style.display = "none";
+      document.getElementById("contenedorBusqueda").style.display = "none";
+
     })
   })
 }
-
-//seleccionar casas
-
 pintarPersonajes(datos)
+//seleccionar casas
 
 const selectGry = document.getElementById("Gryffindor");
 selectGry.addEventListener("click", (event) => {
@@ -203,11 +204,13 @@ selectRev.addEventListener("click", (event) => {
 });
 const selectAll = document.getElementById("Todos");
 selectAll.addEventListener("click", (event) => {
+  document.getElementById("encabezadoPersonajes").style.display = "block";
   document.getElementById("rol").style.display = "block";
   document.getElementById("ordenar").style.display = "block";
-  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("contenedorBusqueda").style.display = "block";
   document.getElementById("encabezadoVaritas").style.display = "none";
   document.getElementById("encabezadoPatronus").style.display = "none";
+
   event.preventDefault();
   pintarPersonajes(datos)
 
@@ -236,7 +239,8 @@ selectRol.addEventListener("change", () => {
 let resultadoPatronus = filterDataPatronus(data);
 pintarPatronus(resultadoPatronus);
 //filter Varitas
-
+let resultVarita = filterDataVarita(data);
+pintarVaritas(resultVarita)
 
 //ORDEN
 let ordenar = document.getElementById("ordenar");
@@ -274,9 +278,26 @@ ordenar.addEventListener("change", () => {
 //buscador
 var botonBuscar = document.getElementById("buscar");
 botonBuscar.addEventListener("click", () => {
+
   var nombre = document.getElementById("name-example").value;
-  var buscado = buscador(data,nombre)
+  var buscado = buscador(data, nombre)
   pintarPersonajes(buscado)
+})
+//enter
+var input = document.getElementById("name-example");
+input.addEventListener("keyup", function (event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+    document.getElementById("buscar").click();
+  }
+});
+
+//recargar
+var botonRecargar = document.getElementById("recargar");
+botonRecargar.addEventListener("click", (event) => {
+  event.preventDefault();
+  pintarPersonajes(datos)
+
 })
 
 //ocultar y mostrar
@@ -292,4 +313,5 @@ botonIngresar.addEventListener("click", siguiente);
 function siguiente() {
   document.getElementById("portada").style.display = "none";
   document.getElementById("pag2").style.display = "block";
+
 }

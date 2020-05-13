@@ -35,8 +35,8 @@
 #inicio {
   display: flex;
   flex-direction: column;
-  background-color: rgba(95, 158, 160, 0.49);
-  border: 8px solid #daeeff78;
+  background-color: rgba(138, 138, 138, 0.49);
+  border: 8px solid #dadada78;
   border-radius: 10%;
   z-index: 2;
   position: relative;
@@ -69,18 +69,18 @@ h3 {
   font-size: 22px;
   word-spacing: 3px;
   border: 2px solid #393956;
-  background: #63617f;
+  background: linear-gradient(to right, #63617fd6 0%, #9999ffc7 100%);
   padding: 2%;
 }
 
 #ingresar {
   display: flex;
-  background-color: #164358;
+  background-color: #5B5C84;
   height: 85px;
   width: 25%;
   justify-content: center;
   font-size: 26px;
-  border: 2px solid #06212d;
+  border: 2px solid #233C67;
   color: #ffffff;
   transition-duration: 0.4s;
   margin-right: auto;
@@ -92,86 +92,93 @@ h3 {
 
 #ingresar:hover {
   color: #ffffff;
-  background-color: #1c5671;
+  background-color: #233C67;
+  border: 2px solid #5B5C84;
 }
 
-article label{
+article label {
   display: none;
 }
-.menu{
-position: fixed;
+
+.menu {
+  position: fixed;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #404863;
+  background: linear-gradient(to bottom, #63617fd9 0%, #9999ffc7 100%);
   width: 23%;
-  height: 96%;
-  margin-top: 0.7%;
+  height: 98%;
+  margin-top: 0.5%;
+  border-radius: 15px;
 }
 
-#btn-menu{
-display:none;
+#btn-menu {
+  display: none;
 }
-#casas{
+
+#casas {
   width: 100%;
+  margin-top: 15%;
 }
+
 .menu .items label {
-position: relative;
-background: #16325b;
-width: 93%;
-height: 40px;
-padding: 10px;
-display: flex;
-border: 1px solid #717171;
-color: white;
-align-items: center;
-margin: 0;
+  position: relative;
+  background: #16325bde;
+  width: 93%;
+  height: 40px;
+  padding: 10px;
+  display: flex;
+  border: 1px solid #717171;
+  color: white;
+  align-items: center;
+  margin: 0;
 }
 
 
 .menu .items label:hover {
-background: #155288;
+  background: #494b86;
 
 }
 
 .menu .items label span {
-position: absolute;
-top: 40%;
-right: 19px;
+  position: absolute;
+  top: 40%;
+  right: 19px;
 }
 
 .menu .items ul {
-width: 100%;
-list-style: none;
-overflow: hidden;
-max-height: 0;
-transition: all .4s linear;
+  width: 100%;
+  list-style: none;
+  overflow: hidden;
+  max-height: 0;
+  transition: all .4s linear;
 }
 
 .menu .items ul li a {
-width: 100%;
-height: 17px;
-padding: 10px;
-display: block;
-text-decoration: none;
-background-color: #3f659dc9;
-color: white;
-border: 1px solid rgba(158, 158, 158, 0.76);
-
+  width: 90%;
+  height: 17px;
+  padding: 10px;
+  display: block;
+  text-decoration: none;
+  background-color: #5b5c84;
+  color: white;
+  border: 1px solid #16325bde;
+  margin-left: 4px;
+  border-radius: 8px
 }
 
 .menu .items ul li a:hover {
-background: #155288;
+  background: #223b66;
 }
 
 .menu .items input:checked~ul {
-height: auto;
-max-height: 200px;
-transform: all;
+  height: auto;
+  max-height: 200px;
+  transform: all;
 }
 
 .menu .items input {
-display: none;
+  display: none;
 }
 
 
@@ -224,7 +231,7 @@ aside {
 .botonesAside {
   display: flex;
   flex-direction: row;
-  height: 20%;
+  height: 70px;
   font-size: 60%;
   font: caption;
   margin-top: 5%;
@@ -253,11 +260,11 @@ aside {
 option {
   font-weight: normal;
   display: block;
-  background: #3f659dc9;
+  background: #5b5c84;
 }
 
 .botonRol {
-  background-color: #16325B;
+  background-color: #233c67;
   height: 84%;
   font-size: 60%;
   font: caption;
@@ -269,7 +276,7 @@ option {
 }
 
 .botonOrden {
-  background-color: #16325B;
+  background-color: #233c67;
   height: 84%;
   font-size: 60%;
   font: caption;
@@ -281,12 +288,40 @@ option {
 }
 
 .busqueda {
-  height: 10%;
-  font-size: 60%;
-  margin-left: 37%;
-  margin-top: 2%;
+  position: absolute;
+  top: 21%;
+  left: 69%;
+
 }
 
+input {
+  outline: none;
+  border: 3px solid #9595ee;
+  color: black;
+  border-radius: 11px;
+  transition: all 0.5s;
+  width: 180px;
+  background: whitesmoke;
+  height: 37px;
+}
+
+
+#buscar {
+  margin-left: -36px;
+  background: whitesmoke;
+  border: 4px solid whitesmoke;
+  color: #63617f;
+  cursor:pointer;
+}
+
+#recargar {
+  margin-left: 10px;
+  background: whitesmoke;
+  border: 4px solid whitesmoke;
+  color: #63617f;
+  border-radius: 14px;
+  cursor:pointer;
+}
 
 footer {
 
@@ -364,7 +399,6 @@ footer {
 
 .modal {
   position: relative;
-  /* background: burlywood; */
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -419,7 +453,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   margin-right: 4%;
-  margin-top: 7%;
 }
 
 .varitas {
@@ -461,7 +494,6 @@ footer {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
-  margin-top: 1%;
   margin-left: 2%;
 }
 
@@ -553,10 +585,10 @@ footer {
     border: 2px solid #393956;
     background: #63617f;
     padding: 3%;
-    margin-left: 10%;
+    margin-left: 11%;
     margin-top: -1.6%;
     width: 83%;
-    height: 29px;
+    height: 19.2px;
   }
 
   #ingresar {
@@ -633,8 +665,9 @@ footer {
 
   #tarjetas {
     display: flex;
-    flex-wrap: wrap;
     padding-left: 15%;
+    flex-direction: column;
+    margin-top: 16%;
   }
 
   .filtro {
@@ -708,15 +741,15 @@ footer {
     height: 40px;
     border-radius: 10%;
     width: 57%;
-    margin-left: 15%;
+    margin-left: 61%;
     margin-top: -4%;
   }
 
   .imagePersonaje {
     display: flex;
     box-shadow: 0 2px 2px rgb(0, 0, 0, 0.2);
-    width: 127px;
-    height: 184px;
+    width: 100%;
+    height: 100%;
     border-radius: 18px;
     border-right: 2px solid #ffffff7d;
     border-bottom: 2px solid #ffffffa6;
@@ -724,7 +757,7 @@ footer {
     border-top: 2px solid #000000d9;
     margin: 8%;
     cursor: pointer;
-    margin-left: 13%;
+    margin-left: 39%;
   }
 
   .foto {
@@ -777,14 +810,14 @@ footer {
   #varitas {
     display: flex;
     flex-wrap: wrap;
-        padding-left: 7%;
+    padding-left: 7%;
   }
 
   .varitas {
     padding: 12%;
     color: white;
     height: 11%;
-width: 47%;
+    width: 47%;
     display: flex;
     border: 3px solid #2a2b6382;
     background: #63617fe3;
@@ -831,7 +864,7 @@ width: 47%;
   }
 
   .patronusP {
-padding: 10%;
+    padding: 10%;
     color: white;
     width: 38%;
     display: flex;
@@ -855,14 +888,21 @@ padding: 10%;
     color: white;
 
   }
-article{
+
+  #casas {
+    width: 100%;
+    margin-top: 5%;
+  }
+
+  article {
     width: 6%;
     margin-top: 6px;
     height: 4%;
     position: fixed;
-    z-index:1;
-}
-article label{
+    z-index: 1;
+  }
+
+  article label {
     display: block;
     color: white;
     padding: 45%;
@@ -874,27 +914,66 @@ article label{
     margin-left: 5%;
     margin-top: -2px;
     height: 82%;
-}
-.menu{
+  }
+
+  .menu {
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #404863;
     width: 72%;
-    height: 96%;
+    height: 92%;
     margin-left: -320px;
-    z-index:1;
-transition: all 0.5s;
-}
+    z-index: 1;
+    transition: all 0.5s;
+  }
 
-#btn-menu{
-display:none;
-}
+  #btn-menu {
+    display: none;
+  }
 
 
-#btn-menu:checked ~ .menu{
-  margin:0;
-}
+  #btn-menu:checked~.menu {
+    margin: 0;
+  }
 
+  .busqueda {
+    position: inherit;
+    top: 21%;
+    left: 69%;
+
+  }
+
+  input {
+    outline: none;
+    border: 3px solid #9595ee;
+    color: black;
+    border-radius: 11px;
+    width: 98%;
+    background: whitesmoke;
+    height: 37px;
+    margin-top: 4%;
+  }
+
+  #buscar {
+    margin-left: -29px;
+    background: whitesmoke;
+    border: 4px solid whitesmoke;
+    color: #63617f;
+  }
+
+  #recargar {
+    margin-left: 10px;
+    background: whitesmoke;
+    border: 4px solid whitesmoke;
+    color: #63617f;
+    border-radius: 14px;
+  }
+
+  #logo {
+    height: auto;
+    width: 64%;
+    margin-top: 13px;
+  }
 }
