@@ -17,6 +17,36 @@
   font-weight: normal;
   font-style: normal;
 }
+footer {
+  width: 100%;
+  color: rgb(255, 255, 255);
+  text-align: center;
+  background-color:black;
+  padding-top: 3px;
+  padding-bottom: 8px;
+  //z-index: 0;
+      font-size: 23px;
+}
+#logoHarry{
+  width: 8%;
+  justify-content: flex-start;
+  display: flex;
+  border-left-width: 34px;
+  padding-left: 3%;
+}
+ contenedorLogos{
+  display: flex;
+  align-content: center;
+  padding-left: 500px;
+  padding-top: 39px;
+  font-size: 35px;
+}
+#logoWizard{
+width: 8%;
+justify-content: flex-end;
+display: flex;
+padding-left: 34%;
+}
 
 #video {
   position: absolute;
@@ -321,15 +351,6 @@ input {
   color: #63617f;
   border-radius: 14px;
   cursor:pointer;
-}
-
-footer {
-
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  color: #634a25;
-  text-align: center;
 }
 
 .imagePersonaje {
@@ -975,5 +996,46 @@ footer {
     height: auto;
     width: 64%;
     margin-top: 13px;
+  }
+  footer {
+    width: 100%;
+    color: white;
+    text-align: center;
+    background-color:black;
+    font-size: 77%;
+  }
+  #logoHarry{
+    width: 10%;
+    justify-content: flex-start;
+    display: flex;
+    border-left-width: 34px;
+    padding-left: 3%;
+    margin-top: 8px;
+  }
+  #contenedorFooter{
+    flex-direction: row;
+    display: flex;
+    justify-content: space-between;
+  }
+   contenedorLogos{
+    display: flex;
+    align-content: center;
+    font-size: 27px;
+    padding-left: 1px;
+    margin-bottom: 4px;
+    margin-top: 0px;
+    padding-bottom: 3px;
+    border-bottom-width: 5‒;
+    padding-top: 27px;
+  
+  }
+  #logoWizard{
+  width: 50px;
+  justify-content: flex-end;
+  display: flex;
+  padding-left: 0%;
+  padding-right: 3%;
+  margin-top: 10px;
+  height: 43px;
   }
 }
