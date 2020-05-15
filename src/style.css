@@ -4,6 +4,12 @@
   ;
 }
 
+body {
+  cursor: url(./img/harry_potter_logo\ \(6\).cur),pointer;
+
+}
+
+
 @font-face {
   font-family: "harry_pregular";
   src: url('./img/HARRYP__.TTF');
@@ -24,28 +30,41 @@ footer {
   background-color:black;
   padding-top: 3px;
   padding-bottom: 8px;
-  //z-index: 0;
-      font-size: 23px;
+  font-size: 23px;
 }
+#contenedorFooter{
+  flex-direction: row;
+  display: flex;
+}
+#contenedorFooter i{
+  margin-right:10px;
+  position: absolute;
+  }
 #logoHarry{
   width: 8%;
   justify-content: flex-start;
   display: flex;
   border-left-width: 34px;
   padding-left: 3%;
+  padding-top: 2%;
 }
- contenedorLogos{
+#contenedorLogos{
   display: flex;
   align-content: center;
-  padding-left: 500px;
+  padding-left: 475px;
   padding-top: 39px;
   font-size: 35px;
 }
 #logoWizard{
-width: 8%;
-justify-content: flex-end;
-display: flex;
-padding-left: 34%;
+  width: 10%;
+  justify-content: flex-end;
+  display: flex;
+  padding-left: 33%;
+  padding-top: 2%;
+  padding-bottom: 1%;
+}
+p{
+  margin-top: -2%;
 }
 
 #video {
@@ -56,6 +75,14 @@ padding-left: 34%;
   height: auto;
   z-index: 1;
   visibility: visible;
+}
+#videoDos {
+  position: fixed;
+  width: 100%;
+  z-index: -10;
+  visibility: visible;
+  top: -40px;
+
 }
 
 #portada {
@@ -86,7 +113,6 @@ h1 {
 h2 {
   font-family: fuente_2;
   color: #06212d;
-  ;
   display: flex;
   justify-content: center;
   font-size: 30px;
@@ -95,15 +121,33 @@ h2 {
 h3 {
   font-family: fuente_2;
   color: #e4e4e4;
-  display: flex;
   font-size: 22px;
   word-spacing: 3px;
   border: 2px solid #393956;
   background: linear-gradient(to right, #63617fd6 0%, #9999ffc7 100%);
   padding: 2%;
+  border-radius: 11px;
+  width: 87%;
+  margin-left: 5%;
+}
+h4 {
+  font-family: harry_pregular;
+  color: white;
+  font-size: 84px;
+  margin-top: -8%;
+  margin-left: -7%;
+}
+
+#contenedorTitulos{
+  position: absolute;
+  height: 3%;
+  width: 23%;
+  margin-left: 30%;
+  margin-top: 5%;
 }
 
 #ingresar {
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
   display: flex;
   background-color: #5B5C84;
   height: 85px;
@@ -117,7 +161,7 @@ h3 {
   margin-left: auto;
   margin-top: 7%;
   border-radius: 10%;
-  cursor: pointer;
+
 }
 
 #ingresar:hover {
@@ -129,17 +173,27 @@ h3 {
 article label {
   display: none;
 }
+#pag2{
+  display: flex;  
+  flex-direction: row;
+  font-weight: bold;
+  text-align: left;
+  flex-wrap: wrap;
+}
+
+article{
+    width: 23%;
+    margin-top: 0.9%;
+}
 
 .menu {
-  position: fixed;
   display: flex;
-  flex-direction: column;
   align-items: center;
-  background: linear-gradient(to bottom, #63617fd9 0%, #9999ffc7 100%);
-  width: 23%;
-  height: 98%;
+  background:linear-gradient(to bottom, #63617fd9 0%, #9999ffc7 100%);
+height: 100vh;
+    flex-direction: column;
   margin-top: 0.5%;
-  border-radius: 15px;
+    border-radius: 15px;
 }
 
 #btn-menu {
@@ -162,6 +216,7 @@ article label {
   color: white;
   align-items: center;
   margin: 0;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
 
@@ -194,7 +249,8 @@ article label {
   color: white;
   border: 1px solid #16325bde;
   margin-left: 4px;
-  border-radius: 8px
+  border-radius: 8px;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
 .menu .items ul li a:hover {
@@ -212,34 +268,6 @@ article label {
 }
 
 
-#fondo {
-  position: fixed;
-  left: 0px;
-  top: 0;
-  width: 100%;
-  height: 100vh;
-  z-index: -10;
-  visibility: visible;
-  background-color: #404863;
-}
-
-.contenedor {
-  height: 100%;
-  display: flex;
-  flex-direction: row;
-}
-
-.filtro {
-  position: fixed;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #404863;
-  width: 23%;
-  height: 96%;
-  margin-top: 0.7%;
-}
-
 #logo {
   height: auto;
   width: 67%;
@@ -252,10 +280,7 @@ aside {
 }
 
 .contenedorTarjetas {
-  display: flex;
-  flex-direction: column;
-  margin-left: 24.5%;
-  width: 75%;
+  width: 74%;
 }
 
 .botonesAside {
@@ -264,7 +289,7 @@ aside {
   height: 70px;
   font-size: 60%;
   font: caption;
-  margin-top: 5%;
+
 }
 
 .seleccion {
@@ -294,63 +319,70 @@ option {
 }
 
 .botonRol {
+  position: absolute;
   background-color: #233c67;
-  height: 84%;
+  height: 9%;
   font-size: 60%;
   font: caption;
-  margin-top: 4px;
+  margin-top: 11%;
   color: white;
   border: 1px solid #404863;
-  margin-left: 3%;
-  width: 18%;
+  margin-left: 20%;
+  width: 15%;
+  border-radius: 6px;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
 .botonOrden {
   background-color: #233c67;
-  height: 84%;
+  height: 9%;
   font-size: 60%;
   font: caption;
-  margin-top: 4px;
+  margin-top: 11%;
   color: white;
   border: 1px solid #404863;
-  margin-left: 3%;
-  width: 18%;
+  margin-left: 2%;
+  width: 16%;
+  border-radius: 6px;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
+  position: absolute;
 }
+
 
 .busqueda {
   position: absolute;
-  top: 21%;
-  left: 69%;
-
+  top: 36%;
+  left: 77%;
+  
 }
 
-input {
-  outline: none;
-  border: 3px solid #9595ee;
-  color: black;
-  border-radius: 11px;
-  transition: all 0.5s;
-  width: 180px;
-  background: whitesmoke;
-  height: 37px;
+input{
+    outline: none;
+    border: 3px solid #9595ee;
+    color: black;
+    border-radius: 11px;
+    transition: all 0.5s;
+    width: 180px;
+    background: whitesmoke;
+    height: 37px;
 }
 
 
-#buscar {
+#buscar{
   margin-left: -36px;
   background: whitesmoke;
   border: 4px solid whitesmoke;
   color: #63617f;
-  cursor:pointer;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
-#recargar {
+#recargar{
   margin-left: 10px;
   background: whitesmoke;
   border: 4px solid whitesmoke;
   color: #63617f;
   border-radius: 14px;
-  cursor:pointer;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
 .imagePersonaje {
@@ -364,7 +396,7 @@ input {
   border-left: 2px solid #000000de;
   border-top: 2px solid #000000d9;
   margin: 9%;
-  cursor: pointer;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
 }
 
 
@@ -376,9 +408,12 @@ input {
 }
 
 #tarjetas {
+
   display: flex;
   flex-wrap: wrap;
   padding: 1%;
+  margin-top: 12%;
+
 
 }
 
@@ -391,7 +426,7 @@ input {
   background: #63617f;
   border: 3px solid #2a2b6382;
   height: 40px;
-  border-radius: 10%;
+  border-radius: 10px;
   width: 92%;
   margin-left: 12%;
   margin-top: -2%;
@@ -460,6 +495,10 @@ input {
   font-weight: bold;
   cursor: pointer;
   z-index: 3;
+  font-family: fantasy;
+  font-size: 30px;
+  cursor: url(./img/Newts_Wand_Harry_Potter\ \(1\).cur),pointer;
+
 }
 
 #imagenVarita {
@@ -500,7 +539,6 @@ input {
   justify-content: center;
   margin-top: 2%;
   margin-left: 4%;
-  /*border: 2px solid red;*/
 }
 
 #divimgVaritas {
@@ -509,7 +547,6 @@ input {
   padding-left: 6%;
 }
 
-/*patronus*/
 #mostrarPatronus {
   flex-direction: row;
   display: flex;
@@ -551,7 +588,7 @@ input {
   margin-top: 2%;
 }
 
-@media (max-width: 426px) {
+@media (max-width: 430px) {
   #video {
     position: fixed;
     left: 0;
@@ -563,6 +600,17 @@ input {
     flex-wrap: wrap;
   }
 
+  #videoDos {
+
+    position: fixed;
+    left: -259px;
+    top: 0;
+    height: 100vh;
+    width: auto;
+    visibility: visible;
+    display: flex;
+    flex-wrap: wrap;
+}
   #portada {
     text-align: left;
   }
@@ -607,11 +655,26 @@ input {
     background: #63617f;
     padding: 3%;
     margin-left: 11%;
-    margin-top: -1.6%;
-    width: 83%;
-    height: 19.2px;
+    margin-top: -1.8%;
+    width: 84%;
+    height: 18.1px;
+    border-radius: 2px;
+  }
+  h4 {
+    font-family: harry_pregular;
+    color: white;
+    font-size: 84px;
+    margin-top: 46%;
+    margin-left: -58%;
+    width: 247%;
   }
 
+  #contenedorTitulos{
+    height: 3%;
+    width: 23%;
+    margin-left: 37%;
+    margin-top: 5%;
+  }
   #ingresar {
     display: flex;
     background-color: #164358;
@@ -644,24 +707,29 @@ input {
     margin-left: 60px;
     display: flex;
     flex-direction: column;
+    height: 144px;
+    margin-top: 25%;
   }
 
   .botonRol {
     background-color: #16325B;
     font: caption;
-    width: 78%;
-    padding: 2%;
+    width: 60%;
+    padding: 3%;
     color: white;
     border: 1px solid #404863;
+    margin-top: 25%;
+    margin-left: 6%;
   }
 
   .botonOrden {
     background-color: #16325B;
     font: caption;
-    width: 78%;
-    padding: 2%;
+    width: 60%;
+    padding: 3%;
     color: white;
     border: 1px solid #404863;
+    margin-left: 6%;
   }
 
   .busqueda {
@@ -669,8 +737,9 @@ input {
     width: 77%;
     display: flex;
     flex-direction: column;
-    margin-left: 3%;
+    margin-left: 6%;
     margin-right: auto;
+    margin-top: 44%;
   }
 
   .botones {
@@ -686,21 +755,12 @@ input {
 
   #tarjetas {
     display: flex;
-    padding-left: 15%;
+       padding-left: 15%;
     flex-direction: column;
-    margin-top: 16%;
+        margin-top: 16%;
   }
 
-  .filtro {
-    position: fixed;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #404863;
-    width: 31%;
-    height: 96%;
-    margin-top: 0.7%;
-  }
+ 
 
   .contenedorM {
     position: fixed;
@@ -760,9 +820,9 @@ input {
     background: #63617f;
     border: 3px solid #2a2b6382;
     height: 40px;
-    border-radius: 10%;
-    width: 57%;
-    margin-left: 61%;
+    border-radius: 10px;
+    width: 94%;
+    margin-left: 42%;
     margin-top: -4%;
   }
 
@@ -783,13 +843,13 @@ input {
 
   .foto {
     position: absolute;
-    width: 69%;
-    height: 29%;
+    width: 72%;
+    height: 25%;
     display: flex;
     align-items: center;
     flex-direction: column;
     z-index: 4;
-    margin-top: 60%;
+    margin-top: 75%;
   }
 
   #parrafo {
@@ -799,7 +859,8 @@ input {
     font-size: 13px;
     word-spacing: 2px;
     text-align: left;
-    margin-top: 160%;
+    margin-top: 181%;
+    width: 160%;
   }
 
   .close {
@@ -809,18 +870,10 @@ input {
     font-weight: 200;
     cursor: pointer;
     z-index: 3;
+    font-family: fantasy;
+    font-size: 30px;
   }
 
-  #fondo {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -10;
-    visibility: visible;
-    background-color: #404863;
-  }
 
   #imagenVarita {
     display: flex;
@@ -831,14 +884,14 @@ input {
   #varitas {
     display: flex;
     flex-wrap: wrap;
-    padding-left: 7%;
+        padding-left: 7%;
   }
 
   .varitas {
     padding: 12%;
     color: white;
-    height: 11%;
-    width: 47%;
+    height: 19%;
+width: 47%;
     display: flex;
     border: 3px solid #2a2b6382;
     background: #63617fe3;
@@ -860,7 +913,6 @@ input {
     margin-left: auto;
   }
 
-  /*patronus*/
   #mostrarPatronus {
     flex-direction: row;
     display: flex;
@@ -885,7 +937,7 @@ input {
   }
 
   .patronusP {
-    padding: 10%;
+padding: 10%;
     color: white;
     width: 38%;
     display: flex;
@@ -895,7 +947,7 @@ input {
     line-height: 80%;
     margin: 1%;
     height: 0%;
-    margin-left: 78px;
+    margin-left: 20%;
   }
 
   .items label {
@@ -909,133 +961,142 @@ input {
     color: white;
 
   }
-
   #casas {
     width: 100%;
     margin-top: 5%;
-  }
-
-  article {
+}
+article{
     width: 6%;
     margin-top: 6px;
     height: 4%;
     position: fixed;
-    z-index: 1;
-  }
-
-  article label {
-    display: block;
-    color: white;
-    padding: 45%;
-    border: 2px solid #404863;
-    background: #63617f;
-    cursor: pointer;
-    text-align: center;
-    width: 74%;
-    margin-left: 5%;
-    margin-top: -2px;
-    height: 82%;
-  }
-
-  .menu {
+    z-index:1;
+}
+article label{
+  display: block;
+  color: white;
+  padding: 43%;
+  border: 2px solid #404863;
+  background: #63617f;
+  cursor: pointer;
+  text-align: center;
+  width: 83%;
+  margin-left: -2%;
+  margin-top: -2px;
+  height: 79%;
+  
+}
+.menu{
     position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-color: #404863;
     width: 72%;
-    height: 92%;
+        height: 92%;
     margin-left: -320px;
-    z-index: 1;
-    transition: all 0.5s;
-  }
+    z-index:1;
+transition: all 0.5s;
+}
 
-  #btn-menu {
-    display: none;
-  }
+#btn-menu{
+display:none;
+}
 
 
-  #btn-menu:checked~.menu {
-    margin: 0;
-  }
+#btn-menu:checked ~ .menu{
+  margin:0;
+}
+.busqueda {
+  position: static;
+  display: flex;
+  flex-direction: row;
+  
+}
 
-  .busqueda {
-    position: inherit;
-    top: 21%;
-    left: 69%;
+input{
+  outline: none;
+  border: 3px solid #9595ee;
+  color: black;
+  border-radius: 11px;
+  width: 76%;
+  background: whitesmoke;
 
-  }
+  margin-top: 4%;
+  margin-left: 3%;
+}
 
-  input {
-    outline: none;
-    border: 3px solid #9595ee;
-    color: black;
-    border-radius: 11px;
-    width: 98%;
-    background: whitesmoke;
-    height: 37px;
-    margin-top: 4%;
-  }
+#buscar{
+  background: whitesmoke;
+  border: 4px solid whitesmoke;
+  color: #63617f;
+  margin-top: 7%;
+  height: 8%;
+}
+#recargar{
+  background: whitesmoke;
+  border: 11px solid whitesmoke;
+  color: #63617f;
+  border-radius: 10px;
 
-  #buscar {
-    margin-left: -29px;
-    background: whitesmoke;
-    border: 4px solid whitesmoke;
-    color: #63617f;
-  }
+  margin-top: 4%;
+  margin-left: 6%;
 
-  #recargar {
-    margin-left: 10px;
-    background: whitesmoke;
-    border: 4px solid whitesmoke;
-    color: #63617f;
-    border-radius: 14px;
-  }
-
-  #logo {
+}
+#logo {
     height: auto;
     width: 64%;
     margin-top: 13px;
-  }
-  footer {
-    width: 100%;
-    color: white;
-    text-align: center;
-    background-color:black;
-    font-size: 77%;
-  }
-  #logoHarry{
-    width: 10%;
-    justify-content: flex-start;
-    display: flex;
-    border-left-width: 34px;
-    padding-left: 3%;
-    margin-top: 8px;
-  }
-  #contenedorFooter{
-    flex-direction: row;
-    display: flex;
-    justify-content: space-between;
-  }
-   contenedorLogos{
-    display: flex;
-    align-content: center;
-    font-size: 27px;
-    padding-left: 1px;
-    margin-bottom: 4px;
-    margin-top: 0px;
-    padding-bottom: 3px;
-    border-bottom-width: 5‒;
-    padding-top: 27px;
-  
-  }
-  #logoWizard{
-  width: 50px;
-  justify-content: flex-end;
+}
+#contenedorFooter{
+  flex-direction: row;
   display: flex;
-  padding-left: 0%;
-  padding-right: 3%;
-  margin-top: 10px;
-  height: 43px;
+}
+#contenedorFooter i{
+  margin-right:10px;
   }
+footer {
+  width: 100%;
+  color: white;
+  text-align: center;
+  background-color:black;
+  font-size: 77%;
+}
+p{
+  margin-top: auto;
+}
+#logoHarry{
+  width: 10%;
+  justify-content: flex-start;
+  display: flex;
+  border-left-width: 34px;
+  padding-left: 3%;
+  margin-top: 8px;
+}
+#contenedorFooter{
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+#contenedorLogos{
+  display: flex;
+  align-content: center;
+  font-size: 27px;
+  padding-left: 1px;
+  margin-bottom: 4px;
+  margin-top: 0px;
+  padding-bottom: 3px;
+  border-bottom-width: 5‒;
+  padding-top: 27px;
+
+}
+#logoWizard{
+width: 50px;
+justify-content: flex-end;
+display: flex;
+padding-left: 0%;
+padding-right: 3%;
+margin-top: 10px;
+height: 43px;
+}
 }

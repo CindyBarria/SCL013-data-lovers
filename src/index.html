@@ -2,9 +2,12 @@
 <html>
 
 <head>
+
   <meta charset="utf-8">
-  <title>Data Lovers</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" type="image/png" href="./img/favicon.ico"/>
+  <title>Potter Data</title>
+  <link rel="stylesheet" href="style.css"  />
+
   <meta name="viewport" content="width=device-width, initial-scale=1,
   maximum-scale=1">
 </head>
@@ -23,9 +26,10 @@
     </div>
   </div>
   <div id="pag2" class="main">
-    <img id="fondo" src="https://i.ibb.co/YtMKb1s/f-con-negro.jpg" ;>
-    <div class="contenedor">
-      <article>
+    <video id="videoDos" loop autoplay preload muted>
+      <source src="./img/starsUno.mp4" type="video/mp4;" />
+    </video>
+      <article id="article">
         <input type="checkbox" id="btn-menu">
         <label for="btn-menu" alt=""><span class=" fas fa-bars"></span>
         </label>
@@ -59,13 +63,20 @@
             </div>
           </div>
         </nav>
+
       </article>
 
       <aside class="contenedorTarjetas">
         <h3 id="encabezadoPersonajes">haz click en los personajes y conoce su infomacion</h3>
         <h3 id="encabezadoVaritas">La varita es quien elije al mago... </h3>
         <h3 id="encabezadoPatronus"> ¡ EXPECTO PATRONUM ! </h3>
+        <div id="contenedorTitulos">
+          <h4 id="tituloPersonajes">Personajes</h4>
+          <h4 id="tituloVaritas" class="titulos">Varitas</h4>
+          <h4 id="tituloPatronus" class="titulos">Patronus</h4>
+        </div>
         <div class="botonesAside" id="botonAside">
+         
           <select id="rol" class="botonRol">
             <option value="" selected disabled>Seleccione Rol </option>
             <option id="alumnos" value="alumnos">Alumnos</option>
@@ -78,6 +89,7 @@
             <option id="descendente" value="d">Z-A</option>
           </select>
 
+          
           <div class="busqueda" id="contenedorBusqueda">
             <input type="name" id="name-example" placeholder="Busca tu mago" name="nombreUsuario" autocomplete="on" />
             <i id="buscar" class="fa fa-search"></i>
@@ -88,22 +100,19 @@
         <div id="varitas"></div>
         <div id="mostrarPatronus"></div>
       </aside>
-    </div>
-  </div>
-
   <footer>
-    <div id=contenedorFooter>
+    <div id="contenedorFooter">
       <img id="logoHarry" src="https://i.ibb.co/qJ08Z74/harry-Logo.png">
-      <contenedorLogos>
+      <div id="contenedorLogos">
         <i class="fab fa-instagram-square"></i>
         <i class="fab fa-twitter-square"></i>
         <i class="fab fa-facebook-square"></i>
-      </contenedorLogos>
+      </div>
       <img id="logoWizard" src="https://i.ibb.co/XDW91L8/WW-logo-2018.png">
-
     </div>
     <p>Laboratoria Wizard United & Warner Bros. Entertaiment Inc</p>
   </footer>
+</div>
   <script src="main.js" type="module"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 

@@ -146,7 +146,7 @@ describe('buscador', () => {
   });
 
   it('deberia retornar Harry Potter ', () => {
-    expect(buscador(dataBuscador).name)===("Harry Potter");
+    expect(buscador(dataBuscador).name.charAt(0).toUpperCase()+name.slice(1).toLowerCase()).toEqual("Harry Potter");
   });
 
 })

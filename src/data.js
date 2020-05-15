@@ -1,5 +1,4 @@
 export const filterDataHouse = (data, condition) => {
-  console.log(condition)
   let house = data.filter((dato) => dato.house === condition);
   return house
 };
@@ -33,5 +32,5 @@ export const filterDataPatronus = (data) => {
 };
 
 export const buscador = (data,nombre) => {
-  return data.filter((dato) => dato.name.toLowerCase().includes(nombre))
+  return data.filter((dato) => dato.name.toLowerCase().includes(nombre) || dato.name.toUpperCase().includes(nombre) || dato.name.includes(nombre.charAt(0).toUpperCase()+nombre.slice(1).toLowerCase()));
 }
