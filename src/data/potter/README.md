@@ -17,4 +17,5 @@ Nuestro primer prototipo fue diseñado de manera simple cubriendo las necesdades
 <img src="https://i.ibb.co/LPT7Y8w/Prototipo1.png">
 Luego se diseño un prototipo de alta fidelidad donde se le dio estilo y aplico paleta de colores de harry potter ademas d e la fuente que se utilizaria y orden de nuestra pagina.
 <img src="https://i.ibb.co/mD7j2HY/Prototipo-Alta-Fidelidad.png" >
+link https://www.figma.com/proto/gPqnQ1gAR3Ct9YwpvUoR8N/Proyecto-Harry-Potter?node-id=4%3A3&scaling=scale-down
 .

@@ -4,9 +4,9 @@
 <head>
 
   <meta charset="utf-8">
-  <link rel="shortcut icon" type="image/png" href="./img/favicon.ico"/>
+  <link rel="shortcut icon" type="image/png" href="./img/favicon.ico" />
   <title>Potter Data</title>
-  <link rel="stylesheet" href="style.css"  />
+  <link rel="stylesheet" href="style.css" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1,
   maximum-scale=1">
@@ -29,90 +29,90 @@
     <video id="videoDos" loop autoplay preload muted>
       <source src="./img/starsUno.mp4" type="video/mp4;" />
     </video>
-      <article id="article">
-        <input type="checkbox" id="btn-menu">
-        <label for="btn-menu" alt=""><span class=" fas fa-bars"></span>
-        </label>
-        <nav class="menu">
-          <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
+    <article id="article">
+      <input type="checkbox" id="btn-menu">
+      <label for="btn-menu" alt=""><span class=" fas fa-bars"></span>
+      </label>
+      <nav class="menu">
+        <img id="logo" src="https://i.ibb.co/4fgTCvx/logo-color.png" ; />
 
-          <div id="casas" class="items">
-            <input type="checkbox" id="check1">
-            <label for="check1">Casas
-              <span class=" fas fa-caret-down"></span>
+        <div id="casas" class="items">
+          <input type="checkbox" id="check1">
+          <label for="check1">Casas
+            <span class=" fas fa-caret-down"></span>
+          </label>
+          <ul id="option">
+            <li id="Gryffindor"><a href="">Gryffindor</a></li>
+            <li id="Slytherin"><a href="">Slytherin</a></li>
+            <li id="Hufflepuff"><a href="">Hufflepuff</a></li>
+            <li id="Ravenclaw"><a href="">Ravenclaw</a></li>
+            <li id="Todos"><a href="">Todos</a></li>
+          </ul>
+
+          <div id="varita" class="items">
+            <input type="checkbox" id="check2">
+            <label id="vari" for="check2">Varitas
+              <span class="fas fa-magic"></span>
             </label>
-            <ul id="option">
-              <li id="Gryffindor"><a href="">Gryffindor</a></li>
-              <li id="Slytherin"><a href="">Slytherin</a></li>
-              <li id="Hufflepuff"><a href="">Hufflepuff</a></li>
-              <li id="Ravenclaw"><a href="">Ravenclaw</a></li>
-              <li id="Todos"><a href="">Todos</a></li>
-            </ul>
-
-            <div id="varita" class="items">
-              <input type="checkbox" id="check2">
-              <label id="vari" for="check2">Varitas
-                <span class="fas fa-magic"></span>
-              </label>
-            </div>
-            <div id="patronus" class="items">
-              <input type="checkbox" id="check3">
-              <label id="patro" for="check3">Patronus
-                <span class=" fas fa-horse"></span>
-              </label>
-            </div>
           </div>
-        </nav>
-
-      </article>
-
-      <aside class="contenedorTarjetas">
-        <h3 id="encabezadoPersonajes">haz click en los personajes y conoce su infomacion</h3>
-        <h3 id="encabezadoVaritas">La varita es quien elije al mago... </h3>
-        <h3 id="encabezadoPatronus"> ¡ EXPECTO PATRONUM ! </h3>
-        <div id="contenedorTitulos">
-          <h4 id="tituloPersonajes">Personajes</h4>
-          <h4 id="tituloVaritas" class="titulos">Varitas</h4>
-          <h4 id="tituloPatronus" class="titulos">Patronus</h4>
-        </div>
-        <div class="botonesAside" id="botonAside">
-         
-          <select id="rol" class="botonRol">
-            <option value="" selected disabled>Seleccione Rol </option>
-            <option id="alumnos" value="alumnos">Alumnos</option>
-            <option id="profesor" value="profesor">Profesor</option>
-            <option id="otros" value="otros">Otros</option>
-          </select>
-          <select id="ordenar" class="botonOrden">
-            <option value="" selected disabled>Ordenar </option>
-            <option id="ascendente" value="a">A-Z</option>
-            <option id="descendente" value="d">Z-A</option>
-          </select>
-
-          
-          <div class="busqueda" id="contenedorBusqueda">
-            <input type="name" id="name-example" placeholder="Busca tu mago" name="nombreUsuario" autocomplete="on" />
-            <i id="buscar" class="fa fa-search"></i>
-            <i id="recargar" class="fas fa-redo-alt"></i>
+          <div id="patronus" class="items">
+            <input type="checkbox" id="check3">
+            <label id="patro" for="check3">Patronus
+              <span class=" fas fa-horse"></span>
+            </label>
           </div>
         </div>
-        <div id="tarjetas"></div>
-        <div id="varitas"></div>
-        <div id="mostrarPatronus"></div>
-      </aside>
-  <footer>
-    <div id="contenedorFooter">
-      <img id="logoHarry" src="https://i.ibb.co/qJ08Z74/harry-Logo.png">
-      <div id="contenedorLogos">
-        <i class="fab fa-instagram-square"></i>
-        <i class="fab fa-twitter-square"></i>
-        <i class="fab fa-facebook-square"></i>
+      </nav>
+
+    </article>
+
+    <aside class="contenedorTarjetas">
+      <h3 id="encabezadoPersonajes">haz click en los personajes y conoce su infomacion</h3>
+      <h3 id="encabezadoVaritas">La varita es quien elije al mago... </h3>
+      <h3 id="encabezadoPatronus"> ¡ EXPECTO PATRONUM ! </h3>
+      <div id="contenedorTitulos">
+        <h4 id="tituloPersonajes">Personajes</h4>
+        <h4 id="tituloVaritas" class="titulos">Varitas</h4>
+        <h4 id="tituloPatronus" class="titulos">Patronus</h4>
       </div>
-      <img id="logoWizard" src="https://i.ibb.co/XDW91L8/WW-logo-2018.png">
-    </div>
-    <p>Laboratoria Wizard United & Warner Bros. Entertaiment Inc</p>
-  </footer>
-</div>
+      <div class="botonesAside" id="botonAside">
+
+        <select id="rol" class="botonRol">
+          <option value="" selected disabled>Seleccione Rol </option>
+          <option id="alumnos" value="alumnos">Alumnos</option>
+          <option id="profesor" value="profesor">Profesor</option>
+          <option id="otros" value="otros">Otros</option>
+        </select>
+        <select id="ordenar" class="botonOrden">
+          <option value="" selected disabled>Ordenar </option>
+          <option id="ascendente" value="a">A-Z</option>
+          <option id="descendente" value="d">Z-A</option>
+        </select>
+
+
+        <div class="busqueda" id="contenedorBusqueda">
+          <input type="name" id="name-example" placeholder="Busca tu mago" name="nombreUsuario" autocomplete="on" />
+          <i id="buscar" class="fa fa-search"></i>
+          <i id="recargar" class="fas fa-redo-alt"></i>
+        </div>
+      </div>
+      <div id="tarjetas"></div>
+      <div id="varitas"></div>
+      <div id="mostrarPatronus"></div>
+    </aside>
+    <footer>
+      <div id="contenedorFooter">
+        <img id="logoHarry" src="https://i.ibb.co/qJ08Z74/harry-Logo.png">
+        <div id="contenedorLogos">
+          <i class="fab fa-instagram-square"></i>
+          <i class="fab fa-twitter-square"></i>
+          <i class="fab fa-facebook-square"></i>
+        </div>
+        <img id="logoWizard" src="https://i.ibb.co/XDW91L8/WW-logo-2018.png">
+      </div>
+      <p>Laboratoria Wizard United & Warner Bros. Entertaiment Inc</p>
+    </footer>
+  </div>
   <script src="main.js" type="module"></script>
   <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 
