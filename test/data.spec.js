@@ -5,7 +5,8 @@ import {
   filterDataOtros,
   filterDataPatronus,
   filterDataVarita,
-  buscador
+  buscador,
+  orden
 } from "../src/data.js";
 //Data casas
 
@@ -134,19 +135,86 @@ describe('filterDataVarita', () => {
 
 })
 
+
+
+
+const dataOrdenOriginal = [{
+    name: 'Arthur Weasley'
+  },
+  {
+    name: 'Bellatrix Lestrange'
+  },
+  {
+    name: 'Argus Filch'
+  }
+];
+
+const dataOrdenAZ = [{
+    name: 'Argus Filch'
+  },
+  {
+    name: 'Arthur Weasley'
+  },
+  {
+    name: 'Bellatrix Lestrange'
+  }
+];
+const dataOrdenZA = [{
+    name: 'Bellatrix Lestrange'
+  },
+  {
+    name: 'Arthur Weasley'
+  },
+  {
+    name: 'Argus Filch'
+  }
+];
+
+describe('orden', () => {
+  test('is a function', () => {
+    expect(typeof orden).toBe('function');
+  });
+
+  it('deberia retornar AZ ', () => {
+    expect(orden(dataOrdenOriginal)).toEqual(dataOrdenAZ);
+  });
+  it('deberia retornar ZA ', () => {
+    expect(orden(dataOrdenOriginal).reverse()).toEqual(dataOrdenZA);
+  });
+
+
+})
+
+
 const dataBuscador = [{
-  name: 'Harry Potter',
-  house: 'Gryffindor',
-  patronus: 'stag'
-}];
+    name: 'Argus Filch'
+  },
+  {
+    name: 'Arthur Weasley'
+  },
+  {
+    name: 'Bellatrix Lestrange'
+  }
+];
+const buscar = "bel" || "BEL" || "Bel"
+const buscado = [{
+    name: 'Rubeus Hagrid'
+  },
+  {
+    name: 'Bellatrix Lestrange'
+  },
+  {
+    name: 'Vincent Crabbe'
+  }
+];
 
 describe('buscador', () => {
   test('is a function', () => {
     expect(typeof buscador).toBe('function');
   });
+  it('deberia retornar Bellatrix ', () => {
+    expect(buscador(dataBuscador, buscar)) === (buscado)
 
-  it('deberia retornar Harry Potter ', () => {
-    expect(buscador(dataBuscador).name.charAt(0).toUpperCase()+name.slice(1).toLowerCase()).toEqual("Harry Potter");
+
   });
-
 })

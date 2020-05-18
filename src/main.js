@@ -6,7 +6,9 @@ import {
   filterDataVarita,
   filterDataPatronus,
   filterDataOtros,
-  buscador
+  buscador,
+  orden
+  
 } from "./data.js";
 
 //Traer data a un const 
@@ -255,31 +257,13 @@ pintarVaritas(resultVarita)
 let ordenar = document.getElementById("ordenar");
 ordenar.addEventListener("change", () => {
   let guardarOrden = ordenar.options[ordenar.selectedIndex].value;
+  let resultOrden= orden(data, guardarOrden);
+
   if (guardarOrden === "a") {
-    const ascendente = (datos.sort(function (a, b) {
-      if (a.name > b.name) {
-        return 1;
-      }
-      if (a.name < b.name) {
-        return -1
-      }
-      return 0
+    pintarPersonajes(resultOrden)
 
-    }));
-    pintarPersonajes(ascendente)
-
-  } else if (guardarOrden === "d") {
-    const descendente = (datos.sort(function (a, b) {
-      if (a.name < b.name) {
-        return 1;
-      }
-      if (a.name > b.name) {
-        return -1
-      }
-      return 0
-
-    }));
-    pintarPersonajes(descendente)
+  } else if(guardarOrden==="d"){
+    pintarPersonajes(resultOrden.reverse())
   }
 
 })
@@ -308,12 +292,14 @@ botonRecargar.addEventListener("click", (event) => {
 //musica
 var botonAudio =document.getElementById("ingresar");
 botonAudio.addEventListener("click", () =>{
-  var audio = new Audio('./img/HP.mp3');
+  var audio = new Audio('./img/HP.mp3') ;
   audio.play();
+  audio.volume = 0.6;
 })
 
 //ocultar y mostrar
 document.getElementById("portada").style.display = "block";
+document.getElementById("footer").style.display = "block";
 document.getElementById("pag2").style.display = "none";
 document.getElementById("encabezadoVaritas").style.display = "none";
 document.getElementById("encabezadoPatronus").style.display = "none";
