@@ -185,6 +185,12 @@ pintarPersonajes(datos)
 const selectGry = document.getElementById("Gryffindor");
 selectGry.addEventListener("click", (event) => {
   let resultGry = filterDataHouse(data, "Gryffindor");
+  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("tituloPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("tituloVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("tituloPatronus").style.display = "none";
   event.preventDefault();
   pintarPersonajes(resultGry)
 
@@ -192,6 +198,12 @@ selectGry.addEventListener("click", (event) => {
 const selectSly = document.getElementById("Slytherin");
 selectSly.addEventListener("click", (event) => {
   let resultSly = filterDataHouse(data, "Slytherin");
+  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("tituloPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("tituloVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("tituloPatronus").style.display = "none";
   event.preventDefault();
   pintarPersonajes(resultSly)
 
@@ -199,6 +211,12 @@ selectSly.addEventListener("click", (event) => {
 const selectHuff = document.getElementById("Hufflepuff");
 selectHuff.addEventListener("click", (event) => {
   let resultHuff = filterDataHouse(data, "Hufflepuff");
+  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("tituloPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("tituloVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("tituloPatronus").style.display = "none";
   event.preventDefault();
   pintarPersonajes(resultHuff)
 
@@ -206,6 +224,12 @@ selectHuff.addEventListener("click", (event) => {
 const selectRev = document.getElementById("Ravenclaw");
 selectRev.addEventListener("click", (event) => {
   let resultRev = filterDataHouse(data, "Ravenclaw");
+  document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("tituloPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("tituloVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("tituloPatronus").style.display = "none";
   event.preventDefault();
   pintarPersonajes(resultRev)
 
