@@ -95,6 +95,15 @@ const pintarPersonajes = (personajes) => {
     })
   })
 }
+const encabezadoPersonajes=()=>{
+  document.getElementById("encabezadoPersonajes").style.display = "none";
+  document.getElementById("rol").style.display = "none";
+  document.getElementById("ordenar").style.display = "none";
+  document.getElementById("contenedorBusqueda").style.display = "none";
+  document.getElementById("tituloPersonajes").style.display = "none";
+
+
+}
 //Varitas 
 const pintarVaritas = (varitaPersonaje) => {
   varitaPersonaje.map(dato => {
@@ -124,15 +133,11 @@ const pintarVaritas = (varitaPersonaje) => {
       divImgVaritas.appendChild(varitaImagen);
       document.getElementById("varitas").appendChild(divVarita);
 
-      document.getElementById("rol").style.display = "none";
-      document.getElementById("ordenar").style.display = "none";
-      document.getElementById("encabezadoPersonajes").style.display = "none";
+      encabezadoPersonajes();
       document.getElementById("encabezadoPatronus").style.display = "none";
-      document.getElementById("encabezadoVaritas").style.display = "block";
-      document.getElementById("contenedorBusqueda").style.display = "none";
-      document.getElementById("tituloPersonajes").style.display = "none";
-      document.getElementById("tituloVaritas").style.display = "block";
       document.getElementById("tituloPatronus").style.display = "none";
+      document.getElementById("tituloVaritas").style.display = "block";
+      document.getElementById("encabezadoVaritas").style.display = "block";
 
 
     })
@@ -166,57 +171,45 @@ const pintarPatronus = (patronusPersonaje) => {
       divImagenPatronus.appendChild(imagenPatronus);
       document.getElementById("mostrarPatronus").appendChild(divPatronus);
 
-      document.getElementById("encabezadoPatronus").style.display = "block";
-      document.getElementById("encabezadoPersonajes").style.display = "none";
-      document.getElementById("encabezadoVaritas").style.display = "none";
-      document.getElementById("rol").style.display = "none";
-      document.getElementById("ordenar").style.display = "none";
-      document.getElementById("contenedorBusqueda").style.display = "none";
-      document.getElementById("tituloPersonajes").style.display = "none";
+      encabezadoPersonajes();
       document.getElementById("tituloVaritas").style.display = "none";
+      document.getElementById("encabezadoVaritas").style.display = "none";
       document.getElementById("tituloPatronus").style.display = "block";
+      document.getElementById("encabezadoPatronus").style.display = "block";
 
     })
   })
 }
 pintarPersonajes(datos)
 //seleccionar casas
+const titulos= () =>{ document.getElementById("encabezadoPersonajes").style.display = "block";
+  document.getElementById("tituloPersonajes").style.display = "block";
+  document.getElementById("encabezadoVaritas").style.display = "none";
+  document.getElementById("tituloVaritas").style.display = "none";
+  document.getElementById("encabezadoPatronus").style.display = "none";
+  document.getElementById("tituloPatronus").style.display = "none"};
 
 const selectGry = document.getElementById("Gryffindor");
 selectGry.addEventListener("click", (event) => {
   let resultGry = filterDataHouse(data, "Gryffindor");
-  document.getElementById("encabezadoPersonajes").style.display = "block";
-  document.getElementById("tituloPersonajes").style.display = "block";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("tituloVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("tituloPatronus").style.display = "none";
+  titulos();
   event.preventDefault();
   pintarPersonajes(resultGry)
 
 });
+
 const selectSly = document.getElementById("Slytherin");
 selectSly.addEventListener("click", (event) => {
   let resultSly = filterDataHouse(data, "Slytherin");
-  document.getElementById("encabezadoPersonajes").style.display = "block";
-  document.getElementById("tituloPersonajes").style.display = "block";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("tituloVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("tituloPatronus").style.display = "none";
+  titulos();
   event.preventDefault();
   pintarPersonajes(resultSly)
-
+  
 });
 const selectHuff = document.getElementById("Hufflepuff");
 selectHuff.addEventListener("click", (event) => {
   let resultHuff = filterDataHouse(data, "Hufflepuff");
-  document.getElementById("encabezadoPersonajes").style.display = "block";
-  document.getElementById("tituloPersonajes").style.display = "block";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("tituloVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("tituloPatronus").style.display = "none";
+   titulos();
   event.preventDefault();
   pintarPersonajes(resultHuff)
 
@@ -224,28 +217,17 @@ selectHuff.addEventListener("click", (event) => {
 const selectRev = document.getElementById("Ravenclaw");
 selectRev.addEventListener("click", (event) => {
   let resultRev = filterDataHouse(data, "Ravenclaw");
-  document.getElementById("encabezadoPersonajes").style.display = "block";
-  document.getElementById("tituloPersonajes").style.display = "block";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("tituloVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("tituloPatronus").style.display = "none";
+  titulos();
   event.preventDefault();
   pintarPersonajes(resultRev)
 
 });
 const selectAll = document.getElementById("Todos");
 selectAll.addEventListener("click", (event) => {
-  document.getElementById("encabezadoPersonajes").style.display = "block";
   document.getElementById("rol").style.display = "block";
   document.getElementById("ordenar").style.display = "block";
   document.getElementById("contenedorBusqueda").style.display = "block";
-  document.getElementById("tituloPersonajes").style.display = "block";
-  document.getElementById("encabezadoVaritas").style.display = "none";
-  document.getElementById("encabezadoPatronus").style.display = "none";
-  document.getElementById("tituloVaritas").style.display = "none";
-  document.getElementById("tituloPatronus").style.display = "none";
-
+  titulos();
   event.preventDefault();
   pintarPersonajes(datos)
 
