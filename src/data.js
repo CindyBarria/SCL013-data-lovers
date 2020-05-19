@@ -34,3 +34,15 @@ export const filterDataPatronus = (data) => {
 export const buscador = (data,nombre) => {
   return data.filter((dato) => dato.name.toLowerCase().includes(nombre) || dato.name.toUpperCase().includes(nombre) || dato.name.includes(nombre.charAt(0).toUpperCase()+nombre.slice(1).toLowerCase()));
 }
+
+export const orden = (data) =>  {
+ let ordenName = data.sort((a, b) => { 
+   if (a.name > b.name) {
+   return 1;
+  } else {
+    return -1;
+  }
+ })
+ return(ordenName)
+}
+
